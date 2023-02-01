@@ -1,6 +1,4 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
+import {useState} from "react";
 import Header from "./ui/Header";
 
 function App() {
@@ -8,9 +6,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <Header />
-      </div>
+      <Header />
       <h1>Hello World</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
