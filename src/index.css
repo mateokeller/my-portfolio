@@ -51,6 +51,7 @@ body {
 
 .logo {
   height: 3rem;
+  cursor: pointer;
 }
 
 .header-nav {
@@ -159,7 +160,7 @@ body {
 
 /* SKILLS CONTAINER */
 
-.skills-container {
+.about-me-container {
   background-color: #c1c1c1;
   height: 100vh;
   display: flex;
@@ -174,7 +175,7 @@ body {
   font-size: 2rem;
 }
 
-.skills-content {
+.about-me-content {
   width: 100vw;
   padding-top: 3rem;
 }

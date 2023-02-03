@@ -1,13 +1,20 @@
 import React, {useState} from "react";
+import {Link as ReactLink} from "react-scroll";
 
 const Header = (props) => {
   return (
     <div className={props.headerStyles}>
       <div className="header-content">
-        <img className="logo" src="/src/assets/altoloho@150x.png"></img>
+        <ReactLink to="home" spy={true} smooth={true}>
+          <img className="logo" src="/src/assets/altoloho@150x.png"></img>
+        </ReactLink>
+
         <div className="header-nav">
           <a href="https://github.com/mateokeller">Github</a>{" "}
-          <a href="">Portfolio</a> <a href="">About Me</a>
+          <a href="">Portfolio</a>
+          <ReactLink to="about-me" spy={true} smooth={true} offset={-50}>
+            <a href="">About Me</a>
+          </ReactLink>
           <a href="">Contact</a>
         </div>
       </div>
