@@ -1,8 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 
-const Header = () => {
+const Header = (props) => {
   return (
-    <div className="header-container">
+    <div className={props.headerStyles}>
       <div className="header-content">
         <img className="logo" src="/src/assets/altoloho@150x.png"></img>
         <div className="header-nav">
