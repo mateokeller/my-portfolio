@@ -10,10 +10,16 @@ const Header = (props) => {
         </ReactLink>
 
         <div className="header-nav">
-          <a href="https://github.com/mateokeller">Github</a>{" "}
+          <a href="https://github.com/mateokeller">Github</a>
           <a href="">Portfolio</a>
-          <ReactLink to="about-me" spy={true} smooth={true} offset={-50}>
-            <a href="">About Me</a>
+          <ReactLink
+            to="about-me"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            className="pointer"
+          >
+            About Me
           </ReactLink>
           <a href="">Contact</a>
         </div>
