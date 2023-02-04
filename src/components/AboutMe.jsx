@@ -50,12 +50,13 @@ const AboutMe = () => {
               thoughtful interactions.
             </p>
             <h3 className="text-yellow">Languages I speak:</h3>
-            <p>HTML, CSS, SASS, Git</p>
+            <p>HTML, CSS, Javascript, Git</p>
             <h3 className="text-yellow">Dev Tools:</h3>
             <p className="tools-list">
-              Javascript <br /> React <br /> Next.js <br />
+              React <br /> Next.js <br />
               Node.js <br />
               Firebase <br />
+              SASS <br />
               Github <br />
               Typescript
             </p>

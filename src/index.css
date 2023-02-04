@@ -174,8 +174,9 @@ body {
 
 .about-me-container {
   background-color: #c1c1c1;
-  height: 100vh;
+  height: 110vh;
   display: flex;
+  margin-bottom: 20vh;
 }
 
 .title {
@@ -207,6 +208,7 @@ body {
   width: 60rem;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  margin-top: 3rem;
 }
 
 .card {
@@ -244,4 +246,13 @@ body {
 
 .tools-list {
   line-height: 2rem;
+}
+
+/* Portfolio */
+
+.portfolio-container {
+  /* background-color: #c1c1c1; */
+  height: 100vh;
+  display: flex;
+  margin-bottom: 20vh;
 }

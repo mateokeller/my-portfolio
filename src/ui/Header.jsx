@@ -11,7 +11,15 @@ const Header = (props) => {
 
         <div className="header-nav">
           <a href="https://github.com/mateokeller">Github</a>
-          <a href="">Portfolio</a>
+          <ReactLink
+            to="portfolio"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            className="pointer"
+          >
+            Portfolio
+          </ReactLink>
           <ReactLink
             to="about-me"
             spy={true}

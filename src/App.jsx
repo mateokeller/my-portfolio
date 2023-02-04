@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {Element} from "react-scroll";
 import AboutMe from "./components/AboutMe";
 import Intro from "./components/Intro";
+import Portfolio from "./components/Portfolio";
 
 import Header from "./ui/Header";
 
@@ -40,8 +41,8 @@ function App() {
           <AboutMe />
         </Element>
 
-        <Element id="home" name="home">
-          <Intro />
+        <Element id="portfolio" name="portfolio">
+          <Portfolio />
         </Element>
       </div>
     </div>
