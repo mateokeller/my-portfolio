@@ -28,11 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header
-      // headerStyles={
-      //   navbar ? "header-container header-shadow" : "header-container"
-      // }
-      />
+      <Header />
 
       <Element id="home" name="home">
         <Intro />
