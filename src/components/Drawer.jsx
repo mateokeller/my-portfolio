@@ -1,9 +1,9 @@
 import React from "react";
 import {Link as ReactLink} from "react-scroll";
 
-const Drawer = () => {
+const Drawer = (props) => {
   return (
-    <div className="drawer">
+    <div className={props.styles}>
       <ReactLink to="home" spy={true} smooth={true}>
         <img className="logo" src="/src/assets/altoloho@150x.png"></img>
       </ReactLink>

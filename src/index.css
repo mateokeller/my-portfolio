@@ -317,6 +317,10 @@ body {
     list-style-type: none;
   }
 
+  .nav-menu {
+  }
+  /* Drawer */
+
   .drawer {
     display: flex;
     gap: 20px;
@@ -328,6 +332,31 @@ body {
     background-color: #ececec;
     padding: 1em 0;
     flex-direction: column;
+  }
+
+  .drawer-closed {
+    transform: translate3d(-1000px, 0, 0);
+    cursor: pointer;
+    transition: 0.25s all ease-in-out;
+    opacity: 0;
+  }
+
+  .drawer-open {
+    transform: translate3d(0px, 0, 0);
+    cursor: pointer;
+    transition: 0.25s all ease-in-out;
+    opacity: 1;
+  }
+
+  .opacity {
+    opacity: 1;
+    transform: translateX(0%);
+    background: rgba(0, 0, 0, 0.4984);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1;
   }
   /* 
   .contact-btn-mobile {

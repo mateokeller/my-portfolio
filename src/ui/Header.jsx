@@ -13,7 +13,7 @@ const Header = (props) => {
   };
 
   return (
-    <div className={props.headerStyles}>
+    <div className="header-container">
       <div className="header-content">
         <ReactLink to="home" spy={true} smooth={true}>
           <img className="logo" src="/src/assets/altoloho@150x.png"></img>
@@ -21,11 +21,19 @@ const Header = (props) => {
 
         <div className="tablet-nav">
           <div className="header-nav">
-            <button onClick={handleToggle}>
-              {openMenu ? <MenuIcon /> : <CloseIcon />}
+            <button className="nav-menu" onClick={handleToggle}>
+              {openMenu ? (
+                <MenuIcon fontSize="large" />
+              ) : (
+                <CloseIcon fontSize="large" />
+              )}
             </button>
           </div>
-          {openMenu ? null : <Drawer />}
+          {openMenu ? (
+            <Drawer styles="drawer drawer-closed" />
+          ) : (
+            <Drawer styles="drawer drawer-open" />
+          )}
         </div>
 
         <div className="desktop-nav">
