@@ -1,7 +1,17 @@
 import React, {useState} from "react";
 import {Link as ReactLink} from "react-scroll";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+
+import Drawer from "../components/Drawer";
 
 const Header = (props) => {
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const handleToggle = () => {
+    setOpenMenu((prev) => !prev);
+  };
+
   return (
     <div className={props.headerStyles}>
       <div className="header-content">
@@ -9,27 +19,46 @@ const Header = (props) => {
           <img className="logo" src="/src/assets/altoloho@150x.png"></img>
         </ReactLink>
 
-        <div className="header-nav">
-          <a href="https://github.com/mateokeller">Github</a>
-          <ReactLink
-            to="portfolio"
-            spy={true}
-            smooth={true}
-            offset={-300}
-            className="pointer"
-          >
-            Portfolio
-          </ReactLink>
-          <ReactLink
-            to="about-me"
-            spy={true}
-            smooth={true}
-            offset={-50}
-            className="pointer"
-          >
-            About Me
-          </ReactLink>
-          <a href="">Contact</a>
+        <div className="tablet-nav">
+          <div className="header-nav">
+            <button onClick={handleToggle}>
+              {openMenu ? <MenuIcon /> : <CloseIcon />}
+            </button>
+          </div>
+          {openMenu ? null : <Drawer />}
+        </div>
+
+        <div className="desktop-nav">
+          <div className="header-nav">
+            <ReactLink
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              className="pointer"
+            >
+              Home
+            </ReactLink>
+            <ReactLink
+              to="about-me"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              className="pointer"
+            >
+              About Me
+            </ReactLink>
+            <ReactLink
+              to="portfolio"
+              spy={true}
+              smooth={true}
+              offset={-300}
+              className="pointer"
+            >
+              Portfolio
+            </ReactLink>
+            <a href="">Contact</a>
+          </div>
         </div>
       </div>
     </div>

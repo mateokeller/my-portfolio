@@ -81,6 +81,14 @@ body {
   font-size: 2rem;
 }
 
+.tablet-nav {
+  display: none;
+}
+
+.desktop-nav {
+  display: block;
+}
+
 /* Heading */
 
 .intro {
@@ -265,6 +273,13 @@ body {
   align-items: center;
   font-weight: 700;
 }
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 1em 2em;
+  }
+}
+
+/* Tablet */
 
 @media (max-width: 768px) {
   .header-container {
@@ -283,12 +298,97 @@ body {
     padding: 1em 2em;
   }
 
+  .tablet-nav {
+    display: block;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .header-nav {
+    display: flex;
+    padding: 0;
+    gap: 0rem;
+    font-weight: 800;
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+  }
+
+  .drawer {
+    display: flex;
+    gap: 20px;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    position: fixed;
+    width: 10em;
+    background-color: #ececec;
+    padding: 1em 0;
+    flex-direction: column;
+  }
+  /* 
+  .contact-btn-mobile {
+    font-size: 1rem;
+    font-weight: 800;
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    border-bottom: solid 1px var(--gray-02);
+    align-items: center;
+    justify-content: center;
+    color: var(--yellow-primary);
+    border: 3px solid #fca311;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+  }
+
+  .contact-btn-mobile:hover {
+    color: #fff;
+  }
+
+  .contact-btn-mobile::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--yellow-primary);
+    transform: translateX(-100%);
+    transition: all 0.3s;
+    z-index: -1;
+  }
+
+  .contact-btn-mobile:hover::before {
+    transform: translateX(0);
+  } */
+
+  .drawer li {
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    /* padding: 3px; */
+    /* align-self: center; */
+    border-bottom: solid 1px var(--gray-02);
+    align-items: center;
+    justify-content: center;
+  }
+
   .intro {
     background: url("/src/assets/landing.png") no-repeat bottom right;
     height: 100vh;
     display: flex;
     align-items: center;
     background-position-x: -33rem;
+    background-position-y: 0;
   }
 
   .group-indicator {
@@ -332,6 +432,8 @@ body {
   }
 }
 
+/* mobile */
+
 @media (max-width: 425px) {
   .intro {
     background: none;
@@ -339,14 +441,15 @@ body {
     display: flex;
     align-items: center;
     background-position-x: -33rem;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .text-container {
-    margin: none;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    align-items: center;
+    text-align: left;
   }
 
   .text-container h1 {

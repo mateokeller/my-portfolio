@@ -11,11 +11,11 @@ const Intro = () => {
         <h2>Front-end Developer</h2>
         <div className="h-line"></div>
         <p className="socials-text">
-          <a href="https://github.com/mateokeller">Github</a> |
+          <a href="https://github.com/mateokeller">Github</a>|
           <a href="http://www.linkedin.com/in/mateo-keller">LinkedIn</a>
         </p>
         <p className="socials-text">
-          <a href="https://www.instagram.com/mateo.keller/">Instagram</a>
+          <a href="https://www.instagram.com/mateo.keller/">Instagram</a>|
           <a href="https://dribbble.com/mateokeller">Dribbble</a>
         </p>
         <button className="btn">CONTACT ME</button>
