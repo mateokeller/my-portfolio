@@ -6,7 +6,7 @@ const AboutMe = () => {
   return (
     <div className="about-me-container">
       <p className="group-indicator">&lt;ABOUT ME&gt;</p>
-      <div className="about-me-content">
+      <div className="section-content">
         <h2 className="text-yellow title">INTRODUCTION</h2>
         <h3 className="subtitle">What I'm Great At</h3>
         <p className="about-me-text">

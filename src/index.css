@@ -188,7 +188,7 @@ body {
   font-size: 2.5rem;
 }
 
-.about-me-content {
+.section-content {
   width: 100vw;
   padding-top: 3rem;
   position: relative;
@@ -255,4 +255,15 @@ body {
   height: 100vh;
   display: flex;
   margin-bottom: 20vh;
+}
+
+.work-filters {
+  display: flex;
+  width: 40rem;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+@media (max-width: 1024) {
 }
