@@ -10,9 +10,9 @@ const Portfolio = () => {
         <div className="work-filters">
           <p>All</p>
           <p>UI/UX</p>
+          <p>Branding</p>
           <p>Web Development</p>
           <p>Graphic Design</p>
-          <p>Branding</p>
         </div>
       </div>
     </div>

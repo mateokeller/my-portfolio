@@ -32,19 +32,18 @@ function App() {
           navbar ? "header-container header-shadow" : "header-container"
         }
       />
-      <div className="container">
-        <Element id="home" name="home">
-          <Intro />
-        </Element>
 
-        <Element id="about-me" name="about-me">
-          <AboutMe />
-        </Element>
+      <Element id="home" name="home">
+        <Intro />
+      </Element>
 
-        <Element id="portfolio" name="portfolio">
-          <Portfolio />
-        </Element>
-      </div>
+      <Element id="about-me" name="about-me">
+        <AboutMe />
+      </Element>
+
+      <Element id="portfolio" name="portfolio">
+        <Portfolio />
+      </Element>
     </div>
   );
 }
