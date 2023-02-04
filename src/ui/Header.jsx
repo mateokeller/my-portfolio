@@ -15,7 +15,7 @@ const Header = (props) => {
             to="portfolio"
             spy={true}
             smooth={true}
-            offset={-50}
+            offset={-300}
             className="pointer"
           >
             Portfolio

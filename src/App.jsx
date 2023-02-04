@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {Element} from "react-scroll";
 import AboutMe from "./components/AboutMe";
+import CardsContainer from "./components/CardsContainer";
 import Intro from "./components/Intro";
 import Portfolio from "./components/Portfolio";
 
@@ -40,7 +41,7 @@ function App() {
       <Element id="about-me" name="about-me">
         <AboutMe />
       </Element>
-
+      <CardsContainer />
       <Element id="portfolio" name="portfolio">
         <Portfolio />
       </Element>

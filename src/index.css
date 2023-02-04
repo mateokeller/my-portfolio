@@ -187,7 +187,6 @@ body {
   background-color: var(--gray-02);
   height: 80vh;
   display: flex;
-  margin-bottom: 20vh;
 }
 
 .section-content {
@@ -206,9 +205,10 @@ body {
 
 .cards-container {
   display: flex;
-  width: 80%;
+  padding: 0 20px;
+  top: -15rem;
+  position: relative;
   gap: 2rem;
-  margin-top: 3rem;
   justify-content: center;
 }
 
@@ -253,6 +253,8 @@ body {
 
 .portfolio-container {
   height: 100vh;
+  position: relative;
+  top: -15rem;
   display: flex;
 }
 
@@ -307,7 +309,7 @@ body {
   }
 
   .about-me-container {
-    height: 190vh;
+    height: 95vh;
     justify-content: center;
   }
 
@@ -340,14 +342,18 @@ body {
   }
 
   .text-container {
-    margin-left: 6em;
+    margin: none;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
   }
 
+  .text-container h1 {
+    text-align: left;
+  }
+
   .about-me-container {
-    height: 230vh;
+    height: 107vh;
   }
 }
