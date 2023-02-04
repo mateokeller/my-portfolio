@@ -21,19 +21,20 @@ const Header = (props) => {
 
         <div className="tablet-nav">
           <div className="header-nav">
-            <button className="nav-menu" onClick={handleToggle}>
-              {openMenu ? (
+            <button className="nav-menu" onClick={props.handleClick}>
+              {/* {openMenu ? (
                 <MenuIcon fontSize="large" />
               ) : (
                 <CloseIcon fontSize="large" />
-              )}
+              )} */}
+              <MenuIcon fontSize="large" />
             </button>
           </div>
-          {openMenu ? (
+          {/* {openMenu ? (
             <Drawer styles="drawer drawer-closed" />
           ) : (
             <Drawer styles="drawer drawer-open" />
-          )}
+          )} */}
         </div>
 
         <div className="desktop-nav">

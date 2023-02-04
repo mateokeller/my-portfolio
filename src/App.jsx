@@ -2,10 +2,12 @@ import {useEffect, useState} from "react";
 
 import Header from "./ui/Header";
 import Layout from "./components/layout/Layout";
+import Drawer from "./components/Drawer";
 
 function App() {
   // navbar scroll when active state
   const [navbar, setNavbar] = useState(false);
+  const [drawer, setOpenDrawer] = useState(false);
 
   // navbar scroll addShadow function
   const changeShadow = () => {
@@ -22,10 +24,23 @@ function App() {
     window.addEventListener("scroll", changeShadow);
   });
 
+  // open drawer function
+  const handleToggle = () => {
+    setOpenDrawer((prev) => !prev);
+  };
+
   return (
     <>
-      <Header />
-      <Layout />
+      <div className={drawer ? "opacity " : ""}>
+        <Header handleClick={handleToggle} />
+        {drawer ? (
+          <Drawer styles="drawer drawer-open" />
+        ) : (
+          <Drawer styles="drawer drawer-closed" />
+        )}
+
+        <Layout />
+      </div>
     </>
   );
 }
