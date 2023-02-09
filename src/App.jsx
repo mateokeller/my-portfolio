@@ -43,6 +43,16 @@ function App() {
         <Layout />
       </div>
     </>
+    // <>
+    //   <Header handleClick={handleToggle} />
+    //   {drawer ? (
+    //     <Drawer styles="drawer drawer-open" />
+    //   ) : (
+    //     <Drawer styles="drawer drawer-closed" />
+    //   )}
+
+    //   <Layout />
+    // </>
   );
 }
 
