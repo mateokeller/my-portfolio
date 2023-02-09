@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 
+import "./index.css";
 import Header from "./ui/Header";
 import Layout from "./components/layout/Layout";
 import Drawer from "./components/Drawer";
@@ -31,7 +32,7 @@ function App() {
 
   return (
     <>
-      <div className={drawer ? "opacity " : ""}>
+      <div className={drawer ? "opacity" : ""}>
         <Header handleClick={handleToggle} />
         {drawer ? (
           <Drawer styles="drawer drawer-open" />
