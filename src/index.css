@@ -99,12 +99,12 @@ body {
 
 /* Heading */
 
-.intro {
+/* .intro {
   background: url("/src/assets/landing.png") no-repeat bottom right;
   height: 100vh;
   display: flex;
   align-items: center;
-}
+} */
 
 .group-indicator {
   font-family: "Bebas Neue", cursive;
