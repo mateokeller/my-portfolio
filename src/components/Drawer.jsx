@@ -31,7 +31,15 @@ const Drawer = (props) => {
           </ReactLink>
         </li>
         <li>
-          <a href="">Contact</a>
+          <ReactLink
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-300}
+            className="pointer"
+          >
+            Contact
+          </ReactLink>
         </li>
       </ul>
     </div>
