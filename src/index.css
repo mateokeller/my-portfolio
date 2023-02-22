@@ -199,10 +199,13 @@ body {
 
 /* ABOUT-ME CONTAINER */
 
-.about-me-container {
+#about-me {
   background-color: var(--gray-02);
-  height: 80vh;
+}
+
+.about-me-container {
   display: flex;
+  height: 720px;
 }
 
 .section-content {
@@ -236,6 +239,7 @@ body {
   color: white;
   padding: 3rem;
   display: flex;
+  gap: 10px;
   flex-direction: column;
   align-items: center;
 }
@@ -449,7 +453,6 @@ body {
   }
 
   .about-me-container {
-    height: 95vh;
     justify-content: center;
   }
 
@@ -497,6 +500,6 @@ body {
   }
 
   .about-me-container {
-    height: 107vh;
+    height: 1000px;
   }
 }
