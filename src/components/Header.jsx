@@ -1,4 +1,5 @@
 import React from "react";
+import {Link as ReactLink} from "react-scroll";
 
 const Header = () => {
   return (
@@ -18,7 +19,17 @@ const Header = () => {
           <a href="https://www.instagram.com/mateo.keller/">Instagram</a>|
           <a href="https://dribbble.com/mateokeller">Dribbble</a>
         </p>
-        <button className="btn">CONTACT ME</button>
+        <button className="btn">
+          <ReactLink
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-300}
+            className="pointer"
+          >
+            CONTACT ME
+          </ReactLink>
+        </button>
       </div>
       {/* <img className="" src="/src/assets/landing.png" alt="header-background" /> */}
     </header>

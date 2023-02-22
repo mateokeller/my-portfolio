@@ -54,7 +54,15 @@ const Navbar = (props) => {
             >
               Portfolio
             </ReactLink>
-            <a href="">Contact</a>
+            <ReactLink
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-300}
+              className="pointer"
+            >
+              Contact
+            </ReactLink>
           </div>
         </div>
       </div>
