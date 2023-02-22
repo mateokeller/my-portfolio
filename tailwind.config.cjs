@@ -9,6 +9,12 @@ module.exports = {
       lg: "1024px",
       XL: "1280px",
     },
+    backgroundSize: {
+      auto: "auto",
+      cover: "cover",
+      contain: "contain",
+      "auto-100%": "auto 100%",
+    },
     extend: {
       backgroundImage: {
         landing: "url('/src/assets/landing.png')",

@@ -3,7 +3,7 @@ import {Link as ReactLink} from "react-scroll";
 
 const Header = () => {
   return (
-    <header className="h-screen w-full flex items-center justify-center bg-no-repeat bg-right-bottom md:bg-[url('/src/assets/landing.png')]  xs:justify-center sm:justify-start">
+    <header className="h-screen w-full flex items-center justify-center bg-no-repeat bg-right-bottom bg-auto-100%  md:bg-[url('/src/assets/landing.png')]  xs:justify-center sm:justify-start">
       <p className="group-indicator">&lt;Home&gt;</p>
       <div className="text-container">
         <h1>
