@@ -19,6 +19,13 @@ module.exports = {
       backgroundImage: {
         landing: "url('/src/assets/landing.png')",
       },
+      colors: {
+        "gray-primary": "#ececec",
+        "gray-02": "#c1c1c1",
+        "gray-03": "#dedede",
+        "gray-04": "#2b2b2b",
+        "yellow-primary": "#fca311",
+      },
     },
   },
   plugins: [],
