@@ -32,8 +32,9 @@ function App() {
 
   return (
     <>
-      <div className={drawer ? "opacity" : ""}>
+      <div>
         <Header handleClick={handleToggle} />
+        <div className={drawer ? "opacity" : ""} onClick={handleToggle}></div>
         {drawer ? (
           <Drawer styles="drawer drawer-open" />
         ) : (

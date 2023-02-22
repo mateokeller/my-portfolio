@@ -4,10 +4,6 @@ import {Link as ReactLink} from "react-scroll";
 const Drawer = (props) => {
   return (
     <div className={props.styles}>
-      <ReactLink to="home" spy={true} smooth={true}>
-        <img className="logo" src="/src/assets/altoloho@150x.png"></img>
-      </ReactLink>
-
       <ul className="header-nav">
         <li>
           <a href="https://github.com/mateokeller">Github</a>

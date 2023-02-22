@@ -87,6 +87,7 @@ body {
 .subtitle {
   margin: 0;
   font-size: 2rem;
+  margin-bottom: 1em;
 }
 
 .tablet-nav {
@@ -118,10 +119,13 @@ body {
 }
 
 .text-container {
+  display: flex;
   width: 16rem;
   text-align: left;
+  gap: 4px;
   margin-left: 10em;
   position: absolute;
+  flex-direction: column;
 }
 
 .text-container h1 {
@@ -172,7 +176,6 @@ body {
   background-color: transparent;
   text-decoration: none;
   overflow: hidden;
-  z-index: 1;
   font-family: inherit;
 }
 
@@ -205,12 +208,12 @@ body {
 
 .about-me-container {
   display: flex;
-  height: 720px;
 }
 
 .section-content {
   width: 100vw;
   padding-top: 3rem;
+  margin-bottom: 20em;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -337,7 +340,7 @@ body {
   .drawer {
     display: flex;
     gap: 20px;
-    top: 0;
+    top: 80px;
     left: 0;
     height: 100vh;
     position: fixed;
@@ -500,6 +503,5 @@ body {
   }
 
   .about-me-container {
-    height: 1000px;
   }
 }

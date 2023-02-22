@@ -31,8 +31,8 @@ const CardsContainer = () => {
         </div>
         <h2>Frontend Developer</h2>
         <p>
-          I value simple content structure, clean design patterns, and
-          thoughtful interactions.
+          I like to code things from scratch, and enjoy bringing ideas to life
+          in the browser.
         </p>
         <h3 className="text-yellow">Languages I speak:</h3>
         <p>HTML, CSS, Javascript, Git</p>
