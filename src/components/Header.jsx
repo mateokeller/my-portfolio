@@ -4,7 +4,9 @@ import {Link as ReactLink} from "react-scroll";
 const Header = () => {
   return (
     <header className="h-screen w-full flex items-center justify-center bg-no-repeat bg-right-bottom bg-auto-100%  md:bg-[url('/src/assets/landing.png')]  xs:justify-center sm:justify-start">
-      <p className="group-indicator">&lt;Home&gt;</p>
+      <p className="hidden lg:block lg:font-group-indicator lg:[font-size:10rem] lg:[width:40rem] lg:self-center lg:absolute lg:transform lg:-rotate-90 lg:text-gray-03 lg:[margin-left:-1em]">
+        &lt;Home&gt;
+      </p>
       <div className="text-container">
         <h1>
           MATEO KELLER<span>.</span>

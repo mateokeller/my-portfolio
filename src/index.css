@@ -92,7 +92,7 @@
 
 /* Heading */
 
-.group-indicator {
+/* .group-indicator {
   font-family: "Bebas Neue", cursive;
   font-size: 10rem;
   width: 40rem;
@@ -101,7 +101,7 @@
   transform: rotate(-90deg);
   color: var(--gray-03);
   margin-left: -1em;
-}
+} */
 
 .text-container {
   display: flex;
