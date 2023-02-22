@@ -17,11 +17,6 @@
   --yellow-primary: #fca311;
 }
 
-body {
-  background-color: var(--gray-primary);
-  margin: 0;
-}
-
 .pointer {
   cursor: pointer;
 }
@@ -130,6 +125,7 @@ body {
 .text-container h2 {
   margin-top: 0;
   font-weight: 800;
+  font-size: 1.2rem;
 }
 
 .text-container span {
