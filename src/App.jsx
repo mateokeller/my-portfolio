@@ -1,13 +1,12 @@
 import {useEffect, useState} from "react";
 
 import "./index.css";
-import Header from "./ui/Header";
+import Navbar from "./ui/Navbar";
 import Layout from "./components/layout/Layout";
 import Drawer from "./components/Drawer";
 
 function App() {
   // navbar scroll when active state
-  const [navbar, setNavbar] = useState(false);
   const [drawer, setOpenDrawer] = useState(false);
 
   // navbar scroll addShadow function
@@ -27,11 +26,11 @@ function App() {
   useEffect(() => {
     // adding the event when scroll change background
     window.addEventListener("scroll", () => {
-      const header = document.querySelector("header");
+      const navbar = document.querySelector(".navbar-container");
       if (window.pageYOffset > 0) {
-        header.classList.add("header-shadow");
+        navbar.classList.add("navbar-shadow");
       } else {
-        header.classList.remove("header-shadow");
+        navbar.classList.remove("navbar-shadow");
       }
     });
   });
@@ -39,7 +38,7 @@ function App() {
   return (
     <>
       <div>
-        <Header handleClick={handleToggle} />
+        <Navbar handleClick={handleToggle} />
         <div className={drawer ? "opacity" : ""} onClick={handleToggle}></div>
         {drawer ? (
           <Drawer styles="drawer drawer-open" />

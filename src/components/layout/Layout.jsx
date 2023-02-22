@@ -1,7 +1,7 @@
 import React from "react";
 import {Element} from "react-scroll";
 
-import Intro from "../intro";
+import Header from "../Header";
 import AboutMe from "../AboutMe";
 import Portfolio from "../Portfolio";
 import CardsContainer from "../CardsContainer";
@@ -10,7 +10,7 @@ const Layout = () => {
   return (
     <>
       <Element id="home" name="home">
-        <Intro />
+        <Header />
       </Element>
 
       <Element id="about-me" name="about-me">

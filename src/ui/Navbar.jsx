@@ -5,14 +5,14 @@ import CloseIcon from "@mui/icons-material/Close";
 
 import Drawer from "../components/Drawer";
 
-const Header = (props) => {
+const Navbar = (props) => {
   const handleToggle = () => {
     setOpenMenu((prev) => !prev);
   };
 
   return (
-    <header className="header-container">
-      <div className="header-content">
+    <div className="navbar-container">
+      <div className="navbar-content">
         <ReactLink to="home" spy={true} smooth={true}>
           <img className="logo" src="/src/assets/altoloho@150x.png"></img>
         </ReactLink>
@@ -58,8 +58,8 @@ const Header = (props) => {
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 
-export default Header;
+export default Navbar;

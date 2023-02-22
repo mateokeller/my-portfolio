@@ -1,8 +1,8 @@
 import React from "react";
 
-const Intro = () => {
+const Header = () => {
   return (
-    <div className="h-screen w-full flex items-center justify-center bg-no-repeat bg-right-bottom md:bg-[url('/src/assets/landing.png')]  xs:justify-center sm:justify-start">
+    <header className="h-screen w-full flex items-center justify-center bg-no-repeat bg-right-bottom md:bg-[url('/src/assets/landing.png')]  xs:justify-center sm:justify-start">
       <p className="group-indicator">&lt;Home&gt;</p>
       <div className="text-container">
         <h1>
@@ -20,8 +20,8 @@ const Intro = () => {
         </p>
         <button className="btn">CONTACT ME</button>
       </div>
-    </div>
+    </header>
   );
 };
 
-export default Intro;
+export default Header;
