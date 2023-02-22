@@ -6,8 +6,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import Drawer from "../components/Drawer";
 
 const Header = (props) => {
-  const [openMenu, setOpenMenu] = useState(false);
-
   const handleToggle = () => {
     setOpenMenu((prev) => !prev);
   };
@@ -22,19 +20,9 @@ const Header = (props) => {
         <div className="tablet-nav">
           <div className="header-nav">
             <button className="nav-menu" onClick={props.handleClick}>
-              {/* {openMenu ? (
-                <MenuIcon fontSize="large" />
-              ) : (
-                <CloseIcon fontSize="large" />
-              )} */}
               <MenuIcon fontSize="large" />
             </button>
           </div>
-          {/* {openMenu ? (
-            <Drawer styles="drawer drawer-closed" />
-          ) : (
-            <Drawer styles="drawer drawer-open" />
-          )} */}
         </div>
 
         <div className="desktop-nav">

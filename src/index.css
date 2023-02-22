@@ -100,13 +100,6 @@ body {
 
 /* Heading */
 
-/* .intro {
-  background: url("/src/assets/landing.png") no-repeat bottom right;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-} */
-
 .group-indicator {
   font-family: "Bebas Neue", cursive;
   font-size: 10rem;
@@ -376,54 +369,11 @@ body {
     height: 100vh;
     z-index: 1;
   }
-  /* 
-  .contact-btn-mobile {
-    font-size: 1rem;
-    font-weight: 800;
-    display: flex;
-    width: 100%;
-    height: 3rem;
-    border-bottom: solid 1px var(--gray-02);
-    align-items: center;
-    justify-content: center;
-    color: var(--yellow-primary);
-    border: 3px solid #fca311;
-    cursor: pointer;
-    position: relative;
-    background-color: transparent;
-    text-decoration: none;
-    overflow: hidden;
-    z-index: 1;
-    font-family: inherit;
-  }
-
-  .contact-btn-mobile:hover {
-    color: #fff;
-  }
-
-  .contact-btn-mobile::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--yellow-primary);
-    transform: translateX(-100%);
-    transition: all 0.3s;
-    z-index: -1;
-  }
-
-  .contact-btn-mobile:hover::before {
-    transform: translateX(0);
-  } */
 
   .drawer li {
     display: flex;
     width: 100%;
     height: 3rem;
-    /* padding: 3px; */
-    /* align-self: center; */
     border-bottom: solid 1px var(--gray-02);
     align-items: center;
     justify-content: center;
