@@ -19,17 +19,15 @@ const Header = () => {
           <a href="https://www.instagram.com/mateo.keller/">Instagram</a>|
           <a href="https://dribbble.com/mateokeller">Dribbble</a>
         </p>
-        <button className="btn">
-          <ReactLink
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-300}
-            className="pointer"
-          >
-            CONTACT ME
-          </ReactLink>
-        </button>
+        <ReactLink
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-300}
+          className="pointer"
+        >
+          <button className="btn">CONTACT ME</button>
+        </ReactLink>
       </div>
       {/* <img className="" src="/src/assets/landing.png" alt="header-background" /> */}
     </header>
