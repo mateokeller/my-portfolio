@@ -19,16 +19,22 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    changeShadow();
-    // adding the event when scroll change background
-    window.addEventListener("scroll", changeShadow);
-  });
-
   // open drawer function
   const handleToggle = () => {
     setOpenDrawer((prev) => !prev);
   };
+
+  useEffect(() => {
+    // adding the event when scroll change background
+    window.addEventListener("scroll", () => {
+      const header = document.querySelector("header");
+      if (window.pageYOffset > 0) {
+        header.classList.add("header-shadow");
+      } else {
+        header.classList.remove("header-shadow");
+      }
+    });
+  });
 
   return (
     <>
@@ -44,16 +50,6 @@ function App() {
         <Layout />
       </div>
     </>
-    // <>
-    //   <Header handleClick={handleToggle} />
-    //   {drawer ? (
-    //     <Drawer styles="drawer drawer-open" />
-    //   ) : (
-    //     <Drawer styles="drawer drawer-closed" />
-    //   )}
-
-    //   <Layout />
-    // </>
   );
 }
 

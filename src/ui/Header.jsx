@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {Link as ReactLink} from "react-scroll";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -11,7 +11,7 @@ const Header = (props) => {
   };
 
   return (
-    <div className="header-container">
+    <header className="header-container">
       <div className="header-content">
         <ReactLink to="home" spy={true} smooth={true}>
           <img className="logo" src="/src/assets/altoloho@150x.png"></img>
@@ -58,7 +58,7 @@ const Header = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
