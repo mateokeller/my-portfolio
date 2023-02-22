@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="h-screen w-full flex items-center justify-center bg-no-repeat bg-right-bottom md:bg-[url('/src/assets/landing.png')]  xs:justify-center sm:justify-start">
+    <header className="h-screen w-full flex items-center justify-center bg-no-repeat bg-right [background-position-y:-20px] md:bg-[url('/src/assets/landing.png')]  xs:justify-center sm:justify-start">
       <p className="group-indicator">&lt;Home&gt;</p>
       <div className="text-container">
         <h1>
@@ -20,6 +20,7 @@ const Header = () => {
         </p>
         <button className="btn">CONTACT ME</button>
       </div>
+      {/* <img className="" src="/src/assets/landing.png" alt="header-background" /> */}
     </header>
   );
 };
