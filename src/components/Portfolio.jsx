@@ -1,103 +1,27 @@
 import React from "react";
 
+import MyListbox from "../ui/Listbox";
+import Gallery from "../ui/Gallery";
+
 const Portfolio = () => {
   return (
-    <div className="portfolio-container">
-      <div className="w-full">
-        <p className="group-indicator">&lt;PORTFOLIO&gt;</p>
-        <div className="section-content">
-          <h2 className="text-yellow title">PORTFOLIO</h2>
-          <h3 className="subtitle">Some Recent Works</h3>
-          <div className="work-filters">
+    <div className="h-auto relative -top-60 flex xs:justify-center md:justify-start">
+      <div className="w-full flex">
+        <p className="hidden md:block md:font-group-indicator md:[font-size:10rem] md:[width:40rem] md:self-center md:absolute md:transform md:-rotate-90 md:text-gray-03 md:[margin-left:-1em]">
+          &lt;PORTFOLIO&gt;
+        </p>
+        <div className="w-full pt-20 mb-72 relative flex flex-col items-center p-4">
+          <h2 className="text-yellow-primary text-2xl">PORTFOLIO</h2>
+          <h3 className="m-0 [font-size:2rem] mb-4">Some Recent Works</h3>
+          <div className="hidden md:flex md:[width:40rem] justify-between items-center font-bold text-xl xs:w-4/5 ">
             <p>All</p>
             <p>Web Development</p>
             <p>Design</p>
           </div>
 
-          <div className="mt-10 lg:grid lg:grid-cols-4 lg:grid-rows-4 lg:gap-x-2 lg:gap-y-3 lg:h-[60rem] lg:w-[70vw] sm:grid sm:grid-cols-2 sm:gap-x-2 sm:gap-y-4 m:grid m:gap-y-3">
-            <div className="rounded-lg shadow-xl lg:row-span-2 lg:col-span-2 lg:h-auto m:h-[250px]">
-              <div class="relative h-full w-full">
-                <img
-                  className="w-full h-full object-cover rounded-lg"
-                  src="/projects-imgs/Parallax Landing.jpg"
-                  alt="parallax landing"
-                />
-                <div class="absolute bottom-0 w-full h-full overflow-hidden opacity-0 hover:opacity-100 transition-all">
-                  <div class="flex flex-col w-full gap-6 absolute bottom-0">
-                    <div class="bg-gray-04 p-4 min-h-[120px]">
-                      <h2 class=" text-xl text-black dark:text-white font-medium">
-                        Parallax Landing
-                      </h2>
-                      <p class="text-black dark:text-white text-sm">
-                        Juego de memoria en la que hay que encontrar las 2
-                        cartas con el mismo emoji para pasar de nivel, aunque
-                        también tiene su modo "relajado" para jugarlo sin tiempo
-                        ni errores.
-                      </p>
-                      <div class="flex gap-2 pt-2">
-                        <a
-                          href="https://remarkable-kleicha-3888bc.netlify.app/"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <svg
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                            fill="#4399CE"
-                            id="magicoon-Filled"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <defs></defs>
-                            <title>link</title>
-                            <g id="link-Filled">
-                              <path
-                                id="link-Filled-2"
-                                data-name="link-Filled"
-                                class="cls-1"
-                                d="M20.545,10.467l-1.839,1.84a1,1,0,0,1-1.414-1.414l1.839-1.84a2.965,2.965,0,0,0,0-4.186,3.027,3.027,0,0,0-4.184,0l-3.36,3.36a2.046,2.046,0,0,0-.267.316,2.943,2.943,0,0,0,.268,3.87,1,1,0,0,1-1.415,1.414,4.915,4.915,0,0,1-.5-6.42,3.792,3.792,0,0,1,.5-.594l3.36-3.36a4.959,4.959,0,0,1,7.013,7.014Zm-8.132-.294a1,1,0,0,0,0,1.414,2.928,2.928,0,0,1,.688,3.1,2.827,2.827,0,0,1-.688,1.088l-3.36,3.36a3.027,3.027,0,0,1-4.184,0,2.965,2.965,0,0,1,0-4.186l1.839-1.84a1,1,0,1,0-1.414-1.414l-1.839,1.84a4.959,4.959,0,1,0,7.013,7.014l3.359-3.359a4.813,4.813,0,0,0,1.163-1.849,4.963,4.963,0,0,0-1.163-5.166A1,1,0,0,0,12.413,10.173Z"
-                              ></path>
-                            </g>
-                          </svg>
-                        </a>
-                        <a
-                          href="https://github.com/mateokeller/Paralax-Landing"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <svg
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            stroke="#4399CE"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="feather feather-github"
-                          >
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class=" bg-lightGrey text-white hover:bg-lightBlue hover:text-white px-3 py-2 rounded-3xl w-max text-xs font-medium mt-3 transition-all">
-                        HTML, CSS, Javascript
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="rounded-lg shadow-xl lg:col-span-2 lg:h-auto m:h-[250px]"></div>
-            <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]"></div>
-            <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]"></div>
-            <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]"></div>
-            <div className="rounded-lg shadow-xl lg:col-span-2 lg:h-auto m:h-[250px]"></div>
-            <div className="rounded-lg shadow-xl lg:row-span-2 lg:h-auto m:h-[250px]"></div>
-            <div className="rounded-lg shadow-xl lg:col-span-2 lg:h-auto m:h-[250px]"></div>
-            <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]"></div>
-          </div>
+          <MyListbox />
+
+          <Gallery />
         </div>
       </div>
 
