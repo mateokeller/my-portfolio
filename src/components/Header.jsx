@@ -50,7 +50,9 @@ const Header = () => {
           offset={-300}
           className="pointer"
         >
-          <button className="btn">CONTACT ME</button>
+          <button className="btn items-center justify-center text-xl font-extrabold flex w-full h-12 border-[3px] border-yellow-primary text-yellow-primary cursor-pointer">
+            CONTACT ME
+          </button>
         </ReactLink>
       </div>
       {/* <img className="" src="/src/assets/landing.png" alt="header-background" /> */}
