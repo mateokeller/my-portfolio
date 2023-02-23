@@ -32,7 +32,7 @@ const Navbar = (props) => {
               spy={true}
               smooth={true}
               offset={-50}
-              className="pointer"
+              className="cursor-pointer"
             >
               Home
             </ReactLink>
@@ -41,7 +41,7 @@ const Navbar = (props) => {
               spy={true}
               smooth={true}
               offset={-50}
-              className="pointer"
+              className="cursor-pointer"
             >
               About Me
             </ReactLink>
@@ -50,11 +50,19 @@ const Navbar = (props) => {
               spy={true}
               smooth={true}
               offset={-300}
-              className="pointer"
+              className="cursor-pointer"
             >
               Portfolio
             </ReactLink>
-            <a href="">Contact</a>
+            <ReactLink
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-300}
+              className="cursor-pointer"
+            >
+              Contact
+            </ReactLink>
           </div>
         </div>
       </div>
