@@ -4,9 +4,14 @@ import {Link as ReactLink} from "react-scroll";
 const Drawer = (props) => {
   return (
     <div className={props.styles}>
-      <ul className="header-nav">
+      <ul className="header-nav flex justify-evenly gap-12 font-extrabold">
         <li>
-          <a href="https://github.com/mateokeller">Github</a>
+          <a
+            className="no-underline text-black"
+            href="https://github.com/mateokeller"
+          >
+            Github
+          </a>
         </li>
         <li>
           <ReactLink
@@ -14,7 +19,7 @@ const Drawer = (props) => {
             spy={true}
             smooth={true}
             offset={-50}
-            className="pointer"
+            className="cursor-pointer"
           >
             About Me
           </ReactLink>
@@ -25,7 +30,7 @@ const Drawer = (props) => {
             spy={true}
             smooth={true}
             offset={-300}
-            className="pointer"
+            className="cursor-pointer"
           >
             Portfolio
           </ReactLink>
@@ -36,7 +41,7 @@ const Drawer = (props) => {
             spy={true}
             smooth={true}
             offset={-300}
-            className="pointer"
+            className="cursor-pointer"
           >
             Contact
           </ReactLink>

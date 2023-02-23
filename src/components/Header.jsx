@@ -48,7 +48,7 @@ const Header = () => {
           spy={true}
           smooth={true}
           offset={-300}
-          className="pointer"
+          className="cursor-pointer"
         >
           <button className="btn items-center justify-center text-xl font-extrabold flex w-full h-12 border-[3px] border-yellow-primary text-yellow-primary cursor-pointer">
             CONTACT ME

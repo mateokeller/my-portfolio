@@ -15,7 +15,7 @@ const Layout = () => {
         <Header />
       </Element>
 
-      <Element id="about-me" name="about-me">
+      <Element id="about-me" name="about-me" className="bg-gray-02">
         <AboutMe />
       </Element>
       <CardsContainer />
