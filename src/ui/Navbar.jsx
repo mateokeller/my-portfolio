@@ -1,9 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {Link as ReactLink} from "react-scroll";
 import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
-
-import Drawer from "../components/Drawer";
 
 const Navbar = (props) => {
   const handleToggle = () => {
@@ -14,7 +11,7 @@ const Navbar = (props) => {
     <div className="navbar-container">
       <div className="navbar-content">
         <ReactLink to="home" spy={true} smooth={true}>
-          <img className="logo" src="/src/assets/altoloho@150x.png"></img>
+          <img className="logo" src="/altoloho@150x.png"></img>
         </ReactLink>
 
         <div className="tablet-nav">
