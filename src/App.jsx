@@ -39,7 +39,12 @@ function App() {
     <>
       <div>
         <Navbar handleClick={handleToggle} />
-        <div className={drawer ? "opacity" : ""} onClick={handleToggle}></div>
+        <div
+          className={
+            drawer ? "bg-black/40 fixed w-full h-screen [z-index:3;]" : ""
+          }
+          onClick={handleToggle}
+        ></div>
         {drawer ? (
           <Drawer styles="drawer drawer-open" />
         ) : (
