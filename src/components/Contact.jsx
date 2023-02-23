@@ -22,7 +22,6 @@ const Contact = () => {
               className="p-3 border-none rounded-sm mb-5 "
               type="text"
               placeholder="Name"
-              value={""}
               required=""
             />
 
