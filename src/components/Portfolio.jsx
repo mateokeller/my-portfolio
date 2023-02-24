@@ -24,10 +24,6 @@ const Portfolio = () => {
           <Gallery />
         </div>
       </div>
-
-      {/* <div className="lg:grid lg:grid-cols-4 lg:grid-rows-4 lg:gap-x-2 lg:gap-y-3 lg:h-[60rem] lg:w-[70vw] sm:grid sm:grid-cols-2 sm:gap-x-2 sm:gap-y-4 m:grid m:gap-y-3">
-        <div className="rounded-lg shadow-xl lg:row-span-2 lg:col-span-2 lg:h-auto  m:h-[250px]"></div>
-      </div> */}
     </div>
   );
 };

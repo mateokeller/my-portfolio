@@ -104,6 +104,16 @@
   transform: translateX(0);
 }
 
+.btn:disabled {
+  opacity: 50%;
+  color: white;
+  cursor: auto;
+}
+
+.btn:disabled:hover:before {
+  transform: translateX(-100%);
+}
+
 /* ABOUT-ME CONTAINER */
 
 @media (max-width: 1024px) {

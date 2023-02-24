@@ -15,29 +15,29 @@ const Header = () => {
         <div className="w-20 h-0.5 bg-yellow-primary"></div>
         <p className="font-extrabold text-xl no-underline text-black">
           <a
-            className="font-extrabold text-xl no-underline text-black"
+            className="font-extrabold text-xl no-underline text-black hover:text-yellow-primary"
             href="https://github.com/mateokeller"
           >
             Github
           </a>
           |
           <a
-            className="font-extrabold text-xl no-underline text-black"
+            className="font-extrabold text-xl no-underline text-black hover:text-yellow-primary"
             href="http://www.linkedin.com/in/mateo-keller"
           >
             LinkedIn
           </a>
         </p>
-        <p className="font-extrabold text-xl no-underline text-black">
+        <p className="font-extrabold text-xl no-underline text-black hover:text-yellow-primary">
           <a
-            className="font-extrabold text-xl no-underline text-black"
+            className="font-extrabold text-xl no-underline text-black hover:text-yellow-primary"
             href="https://www.instagram.com/mateo.keller/"
           >
             Instagram
           </a>
           |
           <a
-            className="font-extrabold text-xl no-underline text-black"
+            className="font-extrabold text-xl no-underline text-black hover:text-yellow-primary"
             href="https://dribbble.com/mateokeller"
           >
             Dribbble

@@ -1,5 +1,7 @@
 import React from "react";
 
+import {Mailer} from "../ui/Mailer";
+
 const Contact = () => {
   return (
     <div className="w-full flex">
@@ -16,39 +18,7 @@ const Contact = () => {
           opportunities.
         </p>
 
-        <div className="bg-gray-04 p-5 rounded-md mt-10 xs:w-11/12 lg:max-w-5xl">
-          <form className="flex flex-col text-white" action="" method="post">
-            <input
-              className="p-3 border-none rounded-sm mb-5 "
-              type="text"
-              placeholder="Name"
-              required=""
-            />
-
-            <input
-              className="p-3 border-none rounded-sm mb-5 "
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email Address"
-              required=""
-            />
-
-            <textarea
-              className="resize-none h-52 p-3 border-none rounded-sm mb-5"
-              id="message"
-              name="message"
-              placeholder="Message"
-              required=""
-            ></textarea>
-            <button
-              className="btn items-center justify-center self-center text-xl font-extrabold flex w-72 xs:max-w-full h-12 border-[3px] border-yellow-primary text-yellow-primary cursor-pointer"
-              type="submit"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
+        <Mailer />
       </div>
     </div>
   );
