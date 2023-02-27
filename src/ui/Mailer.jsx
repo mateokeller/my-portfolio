@@ -17,6 +17,7 @@ export const Mailer = () => {
   };
 
   const [error, setError] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   const sendEmail = (event) => {
     emailjs
@@ -28,6 +29,9 @@ export const Mailer = () => {
       )
       .then((response) => console.log(response))
       .catch((error) => console.log(error));
+
+    setOpenModal(true);
+    console.log("sent email");
   };
 
   const {values, errors, handleChange, handleSubmit, handleBlur} =
@@ -43,6 +47,7 @@ export const Mailer = () => {
       <div className="bg-gray-04 p-5 rounded-md mt-10 xs:w-11/12 lg:max-w-5xl">
         <form
           ref={form}
+          id="frm"
           className="flex flex-col text-black"
           onSubmit={handleSubmit}
           action=""
@@ -111,29 +116,33 @@ export const Mailer = () => {
             Send
           </button>
         </form>
-        {/* <div>
-          <Dialog
-            open={open}
-            aria-labelledby="alert-dialog-title"
-            aria-describedby="alert-dialog-description"
-          >
-            <DialogTitle id="alert-dialog-title">
-              {"Use Google's location service?"}
-            </DialogTitle>
-            <DialogContent>
-              <DialogContentText id="alert-dialog-description">
-                Let Google help apps determine location. This means sending
-                anonymous location data to Google, even when no apps are
-                running.
-              </DialogContentText>
-            </DialogContent>
-            <DialogActions>
-              <button onClick={handleClose} autoFocus>
-                Agree
-              </button>
-            </DialogActions>
-          </Dialog>
-        </div> */}
+        {openModal ? (
+          <div>
+            <Dialog
+              open={true}
+              aria-labelledby="alert-dialog-title"
+              aria-describedby="alert-dialog-description"
+            >
+              <DialogTitle id="alert-dialog-title">{"Thank you."}</DialogTitle>
+              <DialogContent>
+                <DialogContentText id="alert-dialog-description">
+                  I will get back to you as soon as possible.
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions className="xs:self-center md:self-end">
+                <button
+                  className="items-center mr-4 justify-center self-center text-lg  flex w-auto px-5 py-0 xs:max-w-full h-10 border-[1px] border-yellow-primary text-yellow-primary cursor-pointer"
+                  onClick={() => {
+                    setOpenModal(false);
+                  }}
+                  autoFocus
+                >
+                  Agree
+                </button>
+              </DialogActions>
+            </Dialog>
+          </div>
+        ) : null}
       </div>
     </>
   );
