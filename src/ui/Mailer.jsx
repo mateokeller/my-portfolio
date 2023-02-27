@@ -28,7 +28,6 @@ export const Mailer = () => {
       )
       .then((response) => console.log(response))
       .catch((error) => console.log(error));
-    setIsOpen(true);
   };
 
   const {values, errors, handleChange, handleSubmit, handleBlur} =
