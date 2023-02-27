@@ -1,20 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 
 import MyListbox from "../ui/Listbox";
-import Gallery from "../ui/Gallery";
+import GalleryDev from "../ui/GalleryDev";
+import GalleryDesign from "../ui/GalleryDesign";
 
 const Portfolio = () => {
-  // const [data, setData] = useState([]);
-  // const [collection, setCollection] = useState([]);
+  const [category, setCategory] = useState("Dev");
 
-  // useEffect(() => {
-  //   setData(GalleryData);
-  //   setCollection([...new Set(GalleryData.map((item) => item.category))]);
-  // }, []);
-
-  // const gallery_filter = (itemData) => {
-  //   const filterData = GalleryData.filter((item) => item.category == itemData);
-  //   setData(filterData);
+  // const handleToggle = () => {
+  //   setCategory((prev) => !prev);
+  //   console.log(category);
   // };
 
   return (
@@ -26,15 +21,36 @@ const Portfolio = () => {
         <div className="w-full pt-20 relative flex flex-col items-center p-4">
           <h2 className="text-yellow-primary text-2xl">PORTFOLIO</h2>
           <h3 className="m-0 [font-size:2rem] mb-4">Some Recent Works</h3>
-          <div className="hidden md:flex md:[width:40rem] justify-between items-center font-bold text-xl xs:w-4/5 ">
-            <p>All</p>
-            <p>Web Development</p>
-            <p>Design</p>
+          <div className="hidden md:flex md:[width:26rem] justify-between items-center font-bold text-xl xs:w-4/5 ">
+            <button
+              className="hover:text-yellow-primary"
+              onClick={() => {
+                setCategory("Dev");
+              }}
+            >
+              Web Development
+              {category === "Dev" ? (
+                <div className="w-20 h-0.5 bg-yellow-primary"></div>
+              ) : null}
+            </button>
+
+            <button
+              className="hover:text-yellow-primary"
+              onClick={() => {
+                setCategory("Design");
+              }}
+            >
+              Design
+              {category === "Design" ? (
+                <div className="w-20 h-0.5 bg-yellow-primary"></div>
+              ) : null}
+            </button>
           </div>
 
           <MyListbox />
 
-          <Gallery />
+          {category === "Dev" ? <GalleryDev /> : null}
+          {category === "Design" ? <GalleryDesign /> : null}
         </div>
       </div>
     </div>
