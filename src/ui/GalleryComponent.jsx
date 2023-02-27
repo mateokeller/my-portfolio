@@ -5,18 +5,17 @@ const GalleryComponent = (props) => {
     <div className="relative h-full w-full">
       <img
         className="w-full h-full object-cover rounded-lg"
-        src="/projects-imgs/Parallax Landing.jpg"
+        src={props.imagePath}
         alt="parallax landing"
       />
       <div className="absolute bottom-0 w-full h-full overflow-hidden opacity-0 hover:opacity-100 transition-all">
         <div className="flex flex-col w-full gap-6 absolute bottom-0">
-          <div className="bg-gray-04 p-4 min-h-[120px]">
+          <div className="bg-gray-04 p-4 min-h-[120px] rounded-lg">
             <h2 className="text-xl text-black dark:text-white font-medium">
-              Parallax Landing
+              {props.projectTitle}
             </h2>
             <p className="text-black dark:text-white text-sm">
-              Landing made with HTML, CSS and JavaScript as practices for coding
-              and parallax effects.
+              {props.projectDescription}
             </p>
             <div className="flex gap-2 pt-2">
               <a href={props.url} target="_blank" rel="noreferrer">
@@ -58,7 +57,7 @@ const GalleryComponent = (props) => {
               </a>
             </div>
             <div className="bg-yellow-primary text-white  hover:text-white px-3 py-2 rounded-3xl w-max text-xs font-medium mt-3 transition-all">
-              HTML, CSS, Javascript
+              {props.projectSubtitle}
             </div>
           </div>
         </div>

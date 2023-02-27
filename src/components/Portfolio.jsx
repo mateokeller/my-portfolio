@@ -4,6 +4,19 @@ import MyListbox from "../ui/Listbox";
 import Gallery from "../ui/Gallery";
 
 const Portfolio = () => {
+  // const [data, setData] = useState([]);
+  // const [collection, setCollection] = useState([]);
+
+  // useEffect(() => {
+  //   setData(GalleryData);
+  //   setCollection([...new Set(GalleryData.map((item) => item.category))]);
+  // }, []);
+
+  // const gallery_filter = (itemData) => {
+  //   const filterData = GalleryData.filter((item) => item.category == itemData);
+  //   setData(filterData);
+  // };
+
   return (
     <div className="h-auto relative -top-60 flex xs:justify-center md:justify-start">
       <div className="w-full flex">
