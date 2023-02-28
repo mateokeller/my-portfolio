@@ -1,20 +1,25 @@
 import React, {useState} from "react";
 import {Listbox, Transition} from "@headlessui/react";
 
-const MyListbox = () => {
-  const [category, setCategory] = useState("All");
+const MyListbox = (props) => {
+  const [category, setCategory] = useState("Web Development");
 
-  const categories = ["All", "Web Development", "Design"];
+  const categories = ["Web Development", "Design"];
+
+  // const handleChange = () => {
+  //   setCategory(category);
+  //   var filtercategory = category
+  // }
 
   return (
     <div className="md:hidden w-52">
-      <Listbox as="div" value={category} onChange={setCategory}>
+      <Listbox as="div" onChange={props.setCategory}>
         {({open}) => (
           <>
             <div className="relative">
               <span className="inline-block w-full">
                 <Listbox.Button className="pl-3 py-2 w-full text-left focus:outline-none focus:shadow-outline-blue focus:border-blue-300 relative border shadow-sm border-gray-300 rounded text-gray-800">
-                  <span className="block truncate">{category}</span>
+                  <span className="block truncate">{props.category}</span>
                 </Listbox.Button>
               </span>
               <Transition

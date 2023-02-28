@@ -8,7 +8,7 @@ const AboutMe = () => {
       </p>
       <div className="w-full pt-20 mb-72 relative flex flex-col items-center p-4">
         <h2 className="text-yellow-primary text-2xl">INTRODUCTION</h2>
-        <h3 className="m-0 [font-size:2rem] mb-4">
+        <h3 className="m-0 [font-size:2rem] mb-4 xs:[max-width:80%] sm:[min-width:100%]">
           Hi, I'm Mateo. Nice to meet you.
         </h3>
         <p className="text-left md:text-center text-xl max-w-lg">

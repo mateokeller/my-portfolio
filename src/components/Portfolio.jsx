@@ -5,7 +5,9 @@ import GalleryDev from "../ui/GalleryDev";
 import GalleryDesign from "../ui/GalleryDesign";
 
 const Portfolio = () => {
-  const [category, setCategory] = useState("Dev");
+  const [category, setCategory] = useState("Web Development");
+
+  const categories = ["Web Development", "Design"];
 
   // const handleToggle = () => {
   //   setCategory((prev) => !prev);
@@ -25,11 +27,11 @@ const Portfolio = () => {
             <button
               className="hover:text-yellow-primary"
               onClick={() => {
-                setCategory("Dev");
+                setCategory("Web Development");
               }}
             >
               Web Development
-              {category === "Dev" ? (
+              {category === "Web Development" ? (
                 <div className="w-20 h-0.5 bg-yellow-primary"></div>
               ) : null}
             </button>
@@ -47,9 +49,18 @@ const Portfolio = () => {
             </button>
           </div>
 
-          <MyListbox />
+          <MyListbox
+            category={category}
+            setCategory={() => {
+              {
+                category === "Web Development"
+                  ? setCategory("Design")
+                  : setCategory("Web Development");
+              }
+            }}
+          />
 
-          {category === "Dev" ? <GalleryDev /> : null}
+          {category === "Web Development" ? <GalleryDev /> : null}
           {category === "Design" ? <GalleryDesign /> : null}
         </div>
       </div>
