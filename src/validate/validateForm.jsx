@@ -21,7 +21,7 @@ export const validateForm = (values) => {
   // validar el message
   if (!values.message) {
     errors.message = "It must contain a message";
-  } else if (values.message.length < 10) {
+  } else if (values.message.length < 9) {
     errors.message = "El mensaje debe contener por lo menos 10 caracteres";
   }
 

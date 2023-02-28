@@ -1,5 +1,5 @@
 import React, {useState, useRef} from "react";
-import emailjs from "@emailjs/browser";
+
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
@@ -20,27 +20,23 @@ export const Mailer = () => {
   const [openModal, setOpenModal] = useState(false);
 
   const sendEmail = (event) => {
-    emailjs
-      .sendForm(
-        "service_8t0n2qu",
-        "template_g47joqo",
-        form.current,
-        "u-7NDagXvsfPUnlLD"
-      )
-      .then((response) => console.log(response))
-      .catch((error) => console.log(error));
-
     setOpenModal(true);
-    console.log("sent email");
+    console.log(openModal);
   };
 
-  const {values, errors, handleChange, handleSubmit, handleBlur} =
-    useValidation(INITIAL_STATE, validateForm, sendEmail);
+  const {
+    values,
+    errors,
+    handleChange,
+    handleSubmit,
+    handleBlur,
+    buttonDisabled,
+  } = useValidation(INITIAL_STATE, validateForm, sendEmail);
 
   const {name, email, message} = values;
   const form = useRef();
 
-  const isButtonDisabled = name === "" || email === "" || message === "";
+  // const isButtonDisabled = Object.keys(errors).lenght > 0;
 
   return (
     <>
@@ -56,6 +52,7 @@ export const Mailer = () => {
             className="p-3 border-none rounded-sm mb-5"
             type="text"
             value={name}
+            required
             placeholder="Name"
             name="name"
             onChange={handleChange}
@@ -86,6 +83,7 @@ export const Mailer = () => {
           ) : null} */}
 
           <textarea
+            required
             className="p-3 border-none rounded-sm mb-5"
             name="message"
             value={message}
@@ -93,6 +91,7 @@ export const Mailer = () => {
             id=""
             onChange={handleChange}
             onBlur={handleBlur}
+            onInput={handleChange}
           ></textarea>
 
           {/* {errors.message ? (
@@ -101,7 +100,7 @@ export const Mailer = () => {
             </div>
           ) : null} */}
 
-          {/* {error ? (
+          {/* {errors ? (
             <div className="lg:px-3 m:px-2 text-yellow-primary pb-1 text-center">
               {error}
             </div>
@@ -109,7 +108,7 @@ export const Mailer = () => {
 
           <button
             onClick={handleSubmit}
-            disabled={isButtonDisabled}
+            disabled={buttonDisabled}
             type="submit"
             className="btn items-center justify-center self-center text-xl font-extrabold flex w-72 xs:max-w-full h-12 border-[3px] border-yellow-primary text-yellow-primary cursor-pointer"
           >
