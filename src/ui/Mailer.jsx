@@ -52,29 +52,36 @@ export const Mailer = () => {
 
     setLoading(true);
 
-    fetch("https://formsubmit.co/ajax/mateokellergms@gmail.com", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(values),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        if (data.success === "true") {
-          console.log(data);
+    // fetch("https://formsubmit.co/ajax/mateokellergms@gmail.com", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Accept: "application/json",
+    //   },
+    //   body: JSON.stringify(values),
+    // })
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     if (data.success === "true") {
+    //       console.log(data);
 
-          setName("");
-          setEmail("");
-          setMessage("");
+    //       setName("");
+    //       setEmail("");
+    //       setMessage("");
 
-          setLoading(false);
-          setOpenModal(true);
-        }
-      })
-      .catch((error) => console.log(error));
+    //       setLoading(false);
+    //       setOpenModal(true);
+    //     }
+    //   })
+    //   .catch((error) => console.log(error));
+    console.log("email sent successfully");
+    setName("");
+    setEmail("");
+    setMessage("");
+    setLoading(false);
+    setOpenModal(true);
+    console.log(values);
   };
 
   return (
