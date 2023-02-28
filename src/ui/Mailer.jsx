@@ -1,119 +1,137 @@
 import React, {useState, useRef} from "react";
-import emailjs from "@emailjs/browser";
+
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
-import useValidation from "../hooks/useValidation";
-import {validateForm} from "../validate/validateForm";
+import Spinner from "./Spinner";
 
 export const Mailer = () => {
-  const INITIAL_STATE = {
-    name: "",
-    email: "",
-    message: "",
-  };
-
-  const [error, setError] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+  const [Loading, setLoading] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [emailHelper, setEmailHelper] = useState("");
+  const [message, setMessage] = useState("");
 
-  const sendEmail = (event) => {
-    emailjs
-      .sendForm(
-        "service_8t0n2qu",
-        "template_g47joqo",
-        form.current,
-        "u-7NDagXvsfPUnlLD"
-      )
-      .then((response) => console.log(response))
-      .catch((error) => console.log(error));
-
-    setOpenModal(true);
-    console.log("sent email");
+  const values = {
+    name: name,
+    email: email,
+    message: message,
   };
 
-  const {values, errors, handleChange, handleSubmit, handleBlur} =
-    useValidation(INITIAL_STATE, validateForm, sendEmail);
+  const handleChange = (e) => {
+    let valid;
+    switch (e.target.id) {
+      case "email":
+        setEmail(e.target.value);
 
-  const {name, email, message} = values;
-  const form = useRef();
+        valid = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
+          e.target.value
+        );
 
-  const isButtonDisabled = name === "" || email === "" || message === "";
+        if (!valid) {
+          setEmailHelper("Invalid email");
+        } else {
+          setEmailHelper("");
+        }
+
+        if (e.target.value === "") {
+          setEmailHelper("");
+        }
+        break;
+      default:
+        break;
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    // fetch("https://formsubmit.co/ajax/mateokellergms@gmail.com", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Accept: "application/json",
+    //   },
+    //   body: JSON.stringify(values),
+    // })
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     if (data.success === "true") {
+    //       console.log(data);
+
+    //       setName("");
+    //       setEmail("");
+    //       setMessage("");
+
+    //       setLoading(false);
+    //       setOpenModal(true);
+    //     }
+    //   })
+    //   .catch((error) => console.log(error));
+    console.log("email sent successfully");
+    setName("");
+    setEmail("");
+    setMessage("");
+    setLoading(false);
+    setOpenModal(true);
+    console.log(values);
+  };
 
   return (
     <>
       <div className="bg-gray-04 p-5 rounded-md mt-10 xs:w-11/12 lg:max-w-5xl">
-        <form
-          ref={form}
-          id="frm"
-          className="flex flex-col text-black"
-          onSubmit={handleSubmit}
-          action=""
-        >
+        <form id="frm" className="flex flex-col text-black" action="">
           <input
             className="p-3 border-none rounded-sm mb-5"
             type="text"
             value={name}
+            required
             placeholder="Name"
             name="name"
-            onChange={handleChange}
-            onBlur={handleBlur}
+            onChange={(e) => setName(e.target.value)}
           />
-
-          {/* {errors.name ? (
-            <div className="lg:px-3 m:px-2 text-yellow-primary pb-1 text-center">
-              {errors.name}
-            </div>
-          ) : null} */}
-
           <input
             required
             className="p-3 border-none rounded-sm mb-5"
             type="email"
+            id="email"
             value={email}
             placeholder="Email"
-            name="email"
-            onChange={handleChange}
-            onBlur={handleBlur}
+            onChange={(e) => handleChange(e)}
           />
-
-          {/* {errors.email ? (
-            <div className="lg:px-3 m:px-2 text-yellow-primary pb-1 text-center">
-              {errors.email}
-            </div>
-          ) : null} */}
-
           <textarea
+            required
             className="p-3 border-none rounded-sm mb-5"
             name="message"
             value={message}
             placeholder="Leave your message here"
             id=""
-            onChange={handleChange}
-            onBlur={handleBlur}
+            onChange={(e) => setMessage(e.target.value)}
           ></textarea>
-
-          {/* {errors.message ? (
-            <div className="lg:px-3 m:px-2 text-yellow-primary pb-1 text-center">
-              {errors.message}
-            </div>
-          ) : null} */}
-
-          {/* {error ? (
-            <div className="lg:px-3 m:px-2 text-yellow-primary pb-1 text-center">
-              {error}
-            </div>
-          ) : null} */}
 
           <button
             onClick={handleSubmit}
-            disabled={isButtonDisabled}
+            disabled={
+              name.length === 0 ||
+              message.length < 9 ||
+              emailHelper.length !== 0 ||
+              email.length === 0
+            }
             type="submit"
-            className="btn items-center justify-center self-center text-xl font-extrabold flex w-72 xs:max-w-full h-12 border-[3px] border-yellow-primary text-yellow-primary cursor-pointer"
+            className={
+              Loading
+                ? " items-center justify-center self-center text-xl font-extrabold flex w-72 xs:max-w-full h-12 border-[3px] border-yellow-primary text-yellow-primary cursor-pointer"
+                : "btn items-center justify-center self-center text-xl font-extrabold flex w-72 xs:max-w-full h-12 border-[3px] border-yellow-primary text-yellow-primary cursor-pointer"
+            }
           >
-            Send
+            {Loading ? <Spinner /> : <p>Send</p>}
           </button>
         </form>
         {openModal ? (
