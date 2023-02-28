@@ -11,43 +11,104 @@ import {validateForm} from "../validate/validateForm";
 import Spinner from "./Spinner";
 
 export const Mailer = () => {
-  const INITIAL_STATE = {
+  const values = {
     name: "",
     email: "",
     message: "",
   };
 
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+  const [Loading, setLoading] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [emailHelper, setEmailHelper] = useState("");
+  const [message, setMessage] = useState("");
 
   const sendEmail = (event) => {
     setOpenModal(true);
     console.log(openModal);
   };
 
-  const {
-    values,
-    errors,
-    handleChange,
-    handleSubmit,
-    handleBlur,
-    buttonDisabled,
-    Loading,
-  } = useValidation(INITIAL_STATE, validateForm, sendEmail);
+  // const {
+  //   values,
+  //   errors,
+  //   // handleChange,
+  //   // handleSubmit,
+  //   handleBlur,
+  //   buttonDisabled,
+  //   // Loading,
+  // } = useValidation(INITIAL_STATE, validateForm, sendEmail);
 
-  const {name, email, message} = values;
-  const form = useRef();
+  // const {name, email, message} = values;
+  // const form = useRef();
 
   // const isButtonDisabled = Object.keys(errors).lenght > 0;
+
+  const handleChange = (e) => {
+    let valid;
+    switch (e.target.id) {
+      case "email":
+        setEmail(e.target.value);
+
+        valid = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
+          e.target.value
+        );
+
+        if (!valid) {
+          setEmailHelper("Invalid email");
+        } else {
+          setEmailHelper("");
+        }
+
+        if (e.target.value === "") {
+          setEmailHelper("");
+        }
+        break;
+      default:
+        break;
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    fetch("https://formsubmit.co/ajax/mateokellergms@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(values),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        if (data.success === "true") {
+          // setValues(INITIAL_STATE);
+
+          console.log(data);
+          setName("");
+          setEmail("");
+          setMessage("");
+
+          setLoading(false);
+          setOpenModal(true);
+        }
+      })
+      .catch((error) => console.log(error));
+  };
 
   return (
     <>
       <div className="bg-gray-04 p-5 rounded-md mt-10 xs:w-11/12 lg:max-w-5xl">
         <form
-          ref={form}
+          // ref={form}
           id="frm"
           className="flex flex-col text-black"
-          onSubmit={handleSubmit}
+          // onSubmit={handleSubmit}
           action=""
         >
           <input
@@ -57,8 +118,11 @@ export const Mailer = () => {
             required
             placeholder="Name"
             name="name"
-            onChange={handleChange}
-            onBlur={handleBlur}
+            onChange={
+              (e) => setName(e.target.value)
+              // handleChange
+            }
+            // onBlur={handleBlur}
           />
 
           {/* {errors.name ? (
@@ -71,11 +135,15 @@ export const Mailer = () => {
             required
             className="p-3 border-none rounded-sm mb-5"
             type="email"
+            id="email"
+            // error={emailHelper.length !== 0}
             value={email}
             placeholder="Email"
-            name="email"
-            onChange={handleChange}
-            onBlur={handleBlur}
+            onChange={
+              (e) => handleChange(e)
+              // handleChange
+            }
+            // onBlur={handleBlur}
           />
 
           {/* {errors.email ? (
@@ -91,9 +159,9 @@ export const Mailer = () => {
             value={message}
             placeholder="Leave your message here"
             id=""
-            onChange={handleChange}
-            onBlur={handleBlur}
-            onInput={handleChange}
+            onChange={(e) => setMessage(e.target.value)}
+            // onBlur={handleBlur}
+            // onInput={handleChange}
           ></textarea>
 
           {/* {errors.message ? (
@@ -110,7 +178,12 @@ export const Mailer = () => {
 
           <button
             onClick={handleSubmit}
-            disabled={buttonDisabled}
+            disabled={
+              name.length === 0 ||
+              message.length < 9 ||
+              emailHelper.length !== 0 ||
+              email.length === 0
+            }
             type="submit"
             className={
               Loading
