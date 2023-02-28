@@ -1,5 +1,9 @@
 export const validateForm = (values) => {
-  let errors = {};
+  let errors = {
+    // name: "",
+    // email: "",
+    // message: "",
+  };
 
   // validar el nombre
   if (!values.name) {

@@ -8,6 +8,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 import useValidation from "../hooks/useValidation";
 import {validateForm} from "../validate/validateForm";
+import Spinner from "./Spinner";
 
 export const Mailer = () => {
   const INITIAL_STATE = {
@@ -31,6 +32,7 @@ export const Mailer = () => {
     handleSubmit,
     handleBlur,
     buttonDisabled,
+    Loading,
   } = useValidation(INITIAL_STATE, validateForm, sendEmail);
 
   const {name, email, message} = values;
@@ -110,9 +112,13 @@ export const Mailer = () => {
             onClick={handleSubmit}
             disabled={buttonDisabled}
             type="submit"
-            className="btn items-center justify-center self-center text-xl font-extrabold flex w-72 xs:max-w-full h-12 border-[3px] border-yellow-primary text-yellow-primary cursor-pointer"
+            className={
+              Loading
+                ? " items-center justify-center self-center text-xl font-extrabold flex w-72 xs:max-w-full h-12 border-[3px] border-yellow-primary text-yellow-primary cursor-pointer"
+                : "btn items-center justify-center self-center text-xl font-extrabold flex w-72 xs:max-w-full h-12 border-[3px] border-yellow-primary text-yellow-primary cursor-pointer"
+            }
           >
-            Send
+            {Loading ? <Spinner /> : <p>Send</p>}
           </button>
         </form>
         {openModal ? (
