@@ -6,18 +6,9 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
-import useValidation from "../hooks/useValidation";
-import {validateForm} from "../validate/validateForm";
 import Spinner from "./Spinner";
 
 export const Mailer = () => {
-  const values = {
-    name: "",
-    email: "",
-    message: "",
-  };
-
-  // const [error, setError] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const [Loading, setLoading] = useState(false);
   const [name, setName] = useState("");
@@ -25,25 +16,11 @@ export const Mailer = () => {
   const [emailHelper, setEmailHelper] = useState("");
   const [message, setMessage] = useState("");
 
-  const sendEmail = (event) => {
-    setOpenModal(true);
-    console.log(openModal);
+  const values = {
+    name: name,
+    email: email,
+    message: message,
   };
-
-  // const {
-  //   values,
-  //   errors,
-  //   // handleChange,
-  //   // handleSubmit,
-  //   handleBlur,
-  //   buttonDisabled,
-  //   // Loading,
-  // } = useValidation(INITIAL_STATE, validateForm, sendEmail);
-
-  // const {name, email, message} = values;
-  // const form = useRef();
-
-  // const isButtonDisabled = Object.keys(errors).lenght > 0;
 
   const handleChange = (e) => {
     let valid;
@@ -87,9 +64,8 @@ export const Mailer = () => {
       .then((data) => {
         console.log(data);
         if (data.success === "true") {
-          // setValues(INITIAL_STATE);
-
           console.log(data);
+
           setName("");
           setEmail("");
           setMessage("");
@@ -104,13 +80,7 @@ export const Mailer = () => {
   return (
     <>
       <div className="bg-gray-04 p-5 rounded-md mt-10 xs:w-11/12 lg:max-w-5xl">
-        <form
-          // ref={form}
-          id="frm"
-          className="flex flex-col text-black"
-          // onSubmit={handleSubmit}
-          action=""
-        >
+        <form id="frm" className="flex flex-col text-black" action="">
           <input
             className="p-3 border-none rounded-sm mb-5"
             type="text"
@@ -118,40 +88,17 @@ export const Mailer = () => {
             required
             placeholder="Name"
             name="name"
-            onChange={
-              (e) => setName(e.target.value)
-              // handleChange
-            }
-            // onBlur={handleBlur}
+            onChange={(e) => setName(e.target.value)}
           />
-
-          {/* {errors.name ? (
-            <div className="lg:px-3 m:px-2 text-yellow-primary pb-1 text-center">
-              {errors.name}
-            </div>
-          ) : null} */}
-
           <input
             required
             className="p-3 border-none rounded-sm mb-5"
             type="email"
             id="email"
-            // error={emailHelper.length !== 0}
             value={email}
             placeholder="Email"
-            onChange={
-              (e) => handleChange(e)
-              // handleChange
-            }
-            // onBlur={handleBlur}
+            onChange={(e) => handleChange(e)}
           />
-
-          {/* {errors.email ? (
-            <div className="lg:px-3 m:px-2 text-yellow-primary pb-1 text-center">
-              {errors.email}
-            </div>
-          ) : null} */}
-
           <textarea
             required
             className="p-3 border-none rounded-sm mb-5"
@@ -160,21 +107,7 @@ export const Mailer = () => {
             placeholder="Leave your message here"
             id=""
             onChange={(e) => setMessage(e.target.value)}
-            // onBlur={handleBlur}
-            // onInput={handleChange}
           ></textarea>
-
-          {/* {errors.message ? (
-            <div className="lg:px-3 m:px-2 text-yellow-primary pb-1 text-center">
-              {errors.message}
-            </div>
-          ) : null} */}
-
-          {/* {errors ? (
-            <div className="lg:px-3 m:px-2 text-yellow-primary pb-1 text-center">
-              {error}
-            </div>
-          ) : null} */}
 
           <button
             onClick={handleSubmit}
