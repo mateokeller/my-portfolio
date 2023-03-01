@@ -1,34 +1,34 @@
 import React, {useState} from "react";
 import GalleryComponent from "./GalleryComponent";
 
-import Box from "@mui/material/Box";
-import Fade from "@mui/material/Fade";
-import Typography from "@mui/material/Typography";
-import Modal from "@mui/material/Modal";
+// import Box from "@mui/material/Box";
+// import Fade from "@mui/material/Fade";
+// import Typography from "@mui/material/Typography";
+// import Modal from "@mui/material/Modal";
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
+// const style = {
+//   position: "absolute",
+//   top: "50%",
+//   left: "50%",
+//   transform: "translate(-50%, -50%)",
+//   width: 400,
+//   bgcolor: "background.paper",
+//   border: "2px solid #000",
+//   boxShadow: 24,
+//   p: 4,
+// };
 
 const gallery = () => {
-  const [open, setOpen] = useState(false);
-  const [title, setTitle] = useState();
-  const [imagePath, setImagePath] = useState();
-  const [url, setUrl] = useState();
-  const handleOpen = (e) => {
-    setUrl(e.target.url);
-    console.log(e.target.url);
-    setOpen(true);
-  };
-  const handleClose = () => setOpen(false);
+  // const [open, setOpen] = useState(false);
+  // const [title, setTitle] = useState();
+  // const [imagePath, setImagePath] = useState();
+  // const [url, setUrl] = useState();
+  // const handleOpen = (e) => {
+  //   setUrl(e.target.url);
+  //   console.log(e.target.url);
+  //   setOpen(true);
+  // };
+  // const handleClose = () => setOpen(false);
 
   return (
     <div className="flex flex-col justify-center items-center">
@@ -36,67 +36,61 @@ const gallery = () => {
         <div className="rounded-lg shadow-xl lg:row-span-2 lg:col-span-2 lg:h-auto m:h-[250px]">
           <GalleryComponent
             imagePath={"/projects-imgs/producthuntnext.png"}
-            url={"https://remarkable-kleicha-3888bc.netlify.app/"}
-            github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
-            clickedProject={handleOpen}
+            url={"https://producthuntnext-amber.vercel.app/"}
+            github={"https://github.com/mateokeller/producthuntnext"}
+            projectTitle="Producthunt Clone"
+            projectSubtitle="NextJS, Firebase"
+            projectDescription="ProductHunt clone that allows users to log in, upload, comment and vote on products"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:col-span-2 lg:h-auto m:h-[250px]">
           <GalleryComponent
             imagePath={"/projects-imgs/product-list.jpg"}
-            url={"https://remarkable-kleicha-3888bc.netlify.app/"}
-            github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
-            clickedProject={handleOpen}
+            url={"https://effervescent-pony-9bfde4.netlify.app/"}
+            github={"https://github.com/mateokeller/crudredux"}
+            projectTitle="Product List"
+            projectSubtitle="ReactJ, Redux"
+            projectDescription="CRUD product list which allows adding, edditing, and deleting products"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]">
           <GalleryComponent
             imagePath={"/projects-imgs/Tindog.png"}
-            url={"https://remarkable-kleicha-3888bc.netlify.app/"}
-            github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
-            clickedProject={handleOpen}
+            url={"https://deluxe-flan-fc0b29.netlify.app/"}
+            github={"https://github.com/mateokeller/TinDog"}
+            projectTitle="Tindog"
+            projectSubtitle="HTML, CSS and Bootstrap"
+            projectDescription="A tinder website for Dogs"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]">
           <GalleryComponent
             imagePath={"/projects-imgs/ToDo-list.png"}
-            url={"https://remarkable-kleicha-3888bc.netlify.app/"}
-            github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
-            clickedProject={handleOpen}
+            url={"https://codesandbox.io/s/github/mateokeller/ToDo-List"}
+            github={"https://github.com/mateokeller/ToDo-List"}
+            projectTitle="ToDo-List"
+            projectSubtitle="ReactJS"
+            projectDescription="A JavaScript to do list"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]">
           <GalleryComponent
             imagePath={"/projects-imgs/calculator-app.png"}
-            url={"https://remarkable-kleicha-3888bc.netlify.app/"}
-            github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
-            clickedProject={handleOpen}
+            url={"https://calculator-app-amber-psi.vercel.app/"}
+            github={"https://github.com/mateokeller/calculator-app"}
+            projectTitle="Calculator App"
+            projectSubtitle="React Js"
+            projectDescription="calculator app with multiple operations"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:col-span-2 lg:h-auto m:h-[250px]">
           <GalleryComponent
             imagePath={"/projects-imgs/Dona-Sangre.jpg"}
-            url={"https://remarkable-kleicha-3888bc.netlify.app/"}
-            github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
-            clickedProject={handleOpen}
+            url={"https://graceful-selkie-08b8af.netlify.app/"}
+            github={"https://github.com/mateokeller/Dona-sangre"}
+            projectTitle="Dona Sangre ONG"
+            projectSubtitle="HTML, CSS, Javascript, Jquery"
+            projectDescription="redesign of an outdated web for an NGO located in Argentina"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:row-span-2 lg:h-auto m:h-[250px]">
@@ -104,10 +98,9 @@ const gallery = () => {
             imagePath={"/projects-imgs/fullSize-portfolio.png"}
             url={"https://remarkable-kleicha-3888bc.netlify.app/"}
             github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
-            clickedProject={handleOpen}
+            projectTitle="Portfolio"
+            projectSubtitle="HTML CSS React, Tailwind"
+            projectDescription="Portfolio made for personal use"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:col-span-2 lg:h-auto m:h-[250px]">
@@ -115,25 +108,23 @@ const gallery = () => {
             imagePath={"/projects-imgs/Parallax Landing.jpg"}
             url={"https://remarkable-kleicha-3888bc.netlify.app/"}
             github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
-            clickedProject={handleOpen}
+            projectTitle="Parallax"
+            projectSubtitle="HTML, CSS, JavaScript"
+            projectDescription="Made Purely with HTML CSS and JavaScript, to create a parallax effecr on Scroll"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]">
           <GalleryComponent
             imagePath={"/projects-imgs/simon-game-challenge.png"}
-            url={"https://remarkable-kleicha-3888bc.netlify.app/"}
-            github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
-            clickedProject={handleOpen}
+            url={"https://portfolio-mateokeller.vercel.app/"}
+            github={"https://github.com/mateokeller/my-portfolio"}
+            projectTitle="Simon Game Challenge"
+            projectSubtitle="HTML, CSS, JavaScript"
+            projectDescription="Simon game made with HTML, CSS and JavaScript"
           />
         </div>
       </div>
-      <Modal
+      {/* <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -149,7 +140,7 @@ const gallery = () => {
             </Typography>
           </Box>
         </Fade>
-      </Modal>
+      </Modal> */}
     </div>
   );
 };

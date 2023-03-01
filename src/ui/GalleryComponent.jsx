@@ -2,12 +2,9 @@ import React from "react";
 
 const GalleryComponent = (props) => {
   return (
-    <div
-      className="relative h-full w-full cursor-pointer"
-      onClick={props.clickedProject}
-    >
+    <div className="relative h-full w-full cursor-pointer">
       <img
-        className="w-full h-full object-cover rounded-lg"
+        className="w-full h-full object-cover rounded-lg object-top"
         src={props.imagePath}
         alt="parallax landing"
       />
