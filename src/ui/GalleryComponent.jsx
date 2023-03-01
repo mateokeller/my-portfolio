@@ -2,7 +2,10 @@ import React from "react";
 
 const GalleryComponent = (props) => {
   return (
-    <div className="relative h-full w-full">
+    <div
+      className="relative h-full w-full cursor-pointer"
+      onClick={props.clickedProject}
+    >
       <img
         className="w-full h-full object-cover rounded-lg"
         src={props.imagePath}
@@ -10,7 +13,7 @@ const GalleryComponent = (props) => {
       />
       <div className="absolute bottom-0 w-full h-full overflow-hidden opacity-0 hover:opacity-100 transition-all">
         <div className="flex flex-col w-full gap-6 absolute bottom-0">
-          <div className="bg-gray-04 p-4 min-h-[120px] rounded-lg">
+          <div className="bg-gray-04 p-4 min-h-[120px] rounded-b-lg">
             <h2 className="text-xl text-black dark:text-white font-medium">
               {props.projectTitle}
             </h2>
