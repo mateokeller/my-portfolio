@@ -1,6 +1,11 @@
 import React from "react";
 import GalleryComponent from "./GalleryComponent";
 
+import Countach from "../../public/projects-pdfs/Countach.pdf";
+import TheMind from "../../public/projects-pdfs/TheMind.pdf";
+import BetweenTheStars from "../../public/projects-pdfs/BetweenTheStars.pdf";
+import InGame from "../../public/projects-pdfs/InGame.pdf";
+
 const gallery = () => {
   return (
     <div className="flex flex-col justify-center items-center">
@@ -8,91 +13,93 @@ const gallery = () => {
         <div className="rounded-lg shadow-xl lg:row-span-2 lg:col-span-2 lg:h-auto m:h-[250px]">
           <GalleryComponent
             imagePath={"/projects-imgs/the-mind.jpg"}
-            url={"https://remarkable-kleicha-3888bc.netlify.app/"}
-            github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
+            url={TheMind}
+            github={""}
+            projectTitle="The Mind Project"
+            projectSubtitle="Figma, Illustrator, Photoshop"
+            projectDescription="Videogame concept based on the famous board game"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:col-span-2 lg:h-auto m:h-[250px]">
           <GalleryComponent
             imagePath={"/projects-imgs/Dona-Sangre.jpg"}
-            url={"https://remarkable-kleicha-3888bc.netlify.app/"}
-            github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
+            url={"https://graceful-selkie-08b8af.netlify.app/"}
+            github={"https://github.com/mateokeller/Dona-sangre"}
+            projectTitle="Dona Sangre ONG"
+            projectSubtitle="HTML, CSS, Javascript, Jquery"
+            projectDescription="redesign of an outdated web for an NGO located in Argentina"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]">
           <GalleryComponent
             imagePath={"/projects-imgs/between-the-stars.jpg"}
-            url={"https://remarkable-kleicha-3888bc.netlify.app/"}
-            github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
+            url={BetweenTheStars}
+            github={""}
+            projectTitle="Between The Stars"
+            projectSubtitle="Illustrator, Photoshop, Unreal Engine"
+            projectDescription="Concept and pitch for a videogame project"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]">
           <GalleryComponent
             imagePath={"/projects-imgs/in-game.jpg"}
-            url={"https://remarkable-kleicha-3888bc.netlify.app/"}
-            github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
+            url={InGame}
+            github={" "}
+            projectTitle="In Game"
+            projectSubtitle="Illustrator, Photoshop"
+            projectDescription="Poster designed for a Shortfilm project"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]">
           <GalleryComponent
             imagePath={"/projects-imgs/detras.png"}
             url={"https://remarkable-kleicha-3888bc.netlify.app/"}
-            github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
+            github={" "}
+            projectTitle="Space Age"
+            projectSubtitle="3DS Max"
+            projectDescription="Space ship render for the cover of The Impossible Planet, by Phillip K. Dick - The render was inspired by the Space Age"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:col-span-2 lg:h-auto m:h-[250px]">
           <GalleryComponent
             imagePath={"/projects-imgs/countach.jpg"}
-            url={"https://remarkable-kleicha-3888bc.netlify.app/"}
-            github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
+            url={Countach}
+            github={
+              "https://issuu.com/preentregakellermateo/docs/entregafinalissu"
+            }
+            projectTitle="Countach"
+            projectSubtitle="InDesign, Illustrator, Photoshop"
+            projectDescription="3 book set about some of the most iconic Lamborghini models designed ny me"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:row-span-2 lg:h-auto m:h-[250px]">
           <GalleryComponent
             imagePath={"/projects-imgs/australian-open.png"}
             url={"https://remarkable-kleicha-3888bc.netlify.app/"}
-            github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
+            github={" "}
+            projectTitle="Australian Open"
+            projectSubtitle="Illustator, Photoshop"
+            projectDescription="Flyer designed for a private event located in Buenos Aires, Argentina"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:col-span-2 lg:h-auto m:h-[250px]">
           <GalleryComponent
             imagePath={"/projects-imgs/suplemento-vsp.jpg"}
             url={"https://remarkable-kleicha-3888bc.netlify.app/"}
-            github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
+            github={" "}
+            projectTitle="Editorial Supplement"
+            projectSubtitle="InDesign, Illustrator, Photoshop"
+            projectDescription="Editorial Supplement designed for the Centro Cultural Kirchner"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]">
           <GalleryComponent
             imagePath={"/projects-imgs/autorretrato.jpg"}
             url={"https://remarkable-kleicha-3888bc.netlify.app/"}
-            github={"https://github.com/mateokeller/Paralax-Landing"}
-            projectTitle="Paralax"
-            projectSubtitle="Paralax"
-            projectDescription="Project Description"
+            github={" "}
+            projectTitle="Self Portrait"
+            projectSubtitle="Illustrator, Lightroom, Photoshop "
+            projectDescription="Self Portrait project made for a contest in the Universidad Argentina de la Empresa (UADE)"
           />
         </div>
       </div>
