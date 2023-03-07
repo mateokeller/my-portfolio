@@ -38,7 +38,7 @@ const gallery = () => {
             imagePath={"/projects-imgs/producthuntnext.png"}
             url={"https://producthuntnext-amber.vercel.app/"}
             github={"https://github.com/mateokeller/producthuntnext"}
-            projectTitle="Producthunt Clone"
+            projectTitle="Product Hunt Clone"
             projectSubtitle="NextJS, Firebase"
             projectDescription="ProductHunt clone that allows users to log in, upload, comment and vote on products"
           />

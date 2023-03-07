@@ -2,7 +2,7 @@ import React from "react";
 
 const GalleryComponent = (props) => {
   return (
-    <div className="relative h-full w-full cursor-pointer">
+    <div className="relative h-full w-full ">
       <img
         className="w-full h-full object-cover rounded-lg object-top"
         src={props.imagePath}
@@ -18,7 +18,13 @@ const GalleryComponent = (props) => {
               {props.projectDescription}
             </p>
             <div className="flex gap-2 pt-2">
-              <a href={props.url} target="_blank" rel="noreferrer">
+              <a
+                href={props.url}
+                // target="_blank"
+                // rel="noreferrer"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <svg
                   width="22"
                   height="22"
