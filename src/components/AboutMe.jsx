@@ -21,6 +21,12 @@ const AboutMe = () => {
           I'm also working on several projects at a time in order to learn more
           front-end development. <br />
         </p>
+        <a
+          className="font-extrabold text-xl no-underline text-black hover:text-yellow-primary mt-8"
+          href="/public/Curriculum.pdf"
+        >
+          RESUME
+        </a>
       </div>
     </div>
   );
