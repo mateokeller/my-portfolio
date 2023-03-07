@@ -25,7 +25,7 @@ const gallery = () => {
             imagePath={"/projects-imgs/Dona-Sangre.jpg"}
             url={"https://graceful-selkie-08b8af.netlify.app/"}
             github={"https://github.com/mateokeller/Dona-sangre"}
-            projectTitle="Dona Sangre ONG"
+            projectTitle="Donando Sangre ONG"
             projectSubtitle="HTML, CSS, Javascript, Jquery"
             projectDescription="redesign of an outdated web for an NGO located in Argentina"
           />
