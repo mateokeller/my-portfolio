@@ -1,10 +1,13 @@
 import React, {useState} from "react";
 import {Listbox, Transition} from "@headlessui/react";
 
-const MyListbox = (props) => {
-  const [category, setCategory] = useState("Web Development");
+const categories = [
+  {id: 1, name: "Web Development"},
+  {id: 2, name: "Design"},
+];
 
-  const categories = ["Web Development", "Design"];
+const MyListbox = (props) => {
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
 
   // const handleChange = () => {
   //   setCategory(category);
@@ -13,13 +16,29 @@ const MyListbox = (props) => {
 
   return (
     <div className="md:hidden w-52">
-      <Listbox as="div" onChange={props.setCategory}>
+      <Listbox as="div" value={selectedCategory} onChange={setSelectedCategory}>
+        {/* <Listbox.Button className="pl-3 py-2 w-full text-left focus:outline-none focus:shadow-outline-blue focus:border-blue-300 relative border shadow-sm border-gray-300 rounded text-gray-800">
+          {selectedCategory.name}
+        </Listbox.Button>
+        <Listbox.Options>
+          {categories.map((category) => (
+            <Listbox.Option
+              key={category.id}
+              value={category}
+              disabled={category.unavailable}
+            >
+              <span className="block truncate">{category.name}</span>
+            </Listbox.Option>
+          ))}
+        </Listbox.Options> */}
         {({open}) => (
           <>
             <div className="relative">
               <span className="inline-block w-full">
                 <Listbox.Button className="pl-3 py-2 w-full text-left focus:outline-none focus:shadow-outline-blue focus:border-blue-300 relative border shadow-sm border-gray-300 rounded text-gray-800">
-                  <span className="block truncate">{props.category}</span>
+                  <span className="block truncate">
+                    {selectedCategory.name}
+                  </span>
                 </Listbox.Button>
               </span>
               <Transition
@@ -33,7 +52,11 @@ const MyListbox = (props) => {
                   className="border border-gray-300 rounded mt-1"
                 >
                   {categories.map((category) => (
-                    <Listbox.Option key={category} value={category}>
+                    <Listbox.Option
+                      key={category.id}
+                      value={category}
+                      disabled={category.unavailable}
+                    >
                       {({selected, active}) => (
                         <div
                           className={`${
@@ -47,7 +70,7 @@ const MyListbox = (props) => {
                               selected ? "font-semibold" : "font-normal"
                             }`}
                           >
-                            {category}
+                            {category.name}
                           </span>
 
                           {selected && (

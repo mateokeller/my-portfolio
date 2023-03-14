@@ -4,10 +4,14 @@ import MyListbox from "../ui/Listbox";
 import GalleryDev from "../ui/GalleryDev";
 import GalleryDesign from "../ui/GalleryDesign";
 
+const categories = [
+  {id: 1, name: "Web Development"},
+  {id: 2, name: "Design"},
+];
+
 const Portfolio = () => {
   const [category, setCategory] = useState("Web Development");
-
-  const categories = ["Web Development", "Design"];
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
 
   // const handleToggle = () => {
   //   setCategory((prev) => !prev);
@@ -50,8 +54,8 @@ const Portfolio = () => {
           </div>
 
           <MyListbox
-            category={category}
-            setCategory={() => {
+            selectedcategory={category.name}
+            setSelectedCategory={() => {
               {
                 category === "Web Development"
                   ? setCategory("Design")
