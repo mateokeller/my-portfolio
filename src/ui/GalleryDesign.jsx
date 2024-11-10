@@ -3,6 +3,7 @@ import GalleryComponent from "./GalleryComponent";
 
 import Countach from "../../public/projects-pdfs/Countach.pdf";
 import TheMind from "../../public/projects-pdfs/TheMind.pdf";
+import EkipeC from "../../public/projects-imgs/ekipe-c-landing.png";
 import BetweenTheStars from "../../public/projects-pdfs/BetweenTheStars.pdf";
 import InGame from "../../public/projects-pdfs/InGame.pdf";
 
@@ -12,12 +13,12 @@ const gallery = () => {
       <div className="mt-10 lg:grid lg:grid-cols-4 lg:grid-rows-4 lg:gap-x-2 lg:gap-y-3 lg:h-[60rem] lg:w-[70vw] sm:grid sm:grid-cols-2 sm:gap-x-2 sm:gap-y-4 xs:grid xs:gap-y-3">
         <div className="rounded-lg shadow-xl lg:row-span-2 lg:col-span-2 lg:h-auto m:h-[250px]">
           <GalleryComponent
-            imagePath={"/projects-imgs/the-mind.jpg"}
-            url={TheMind}
+            imagePath={"/projects-imgs/ekipe-c-landing.png"}
+            url={"https://www.ekipe-c.com.br/"}
             github={""}
-            projectTitle="The Mind Project"
+            projectTitle="Ekipe-C Landing"
             projectSubtitle="Figma, Illustrator, Photoshop"
-            projectDescription="Videogame concept based on the famous board game"
+            projectDescription="Website designed for Brasilian company"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:col-span-2 lg:h-auto m:h-[250px]">
