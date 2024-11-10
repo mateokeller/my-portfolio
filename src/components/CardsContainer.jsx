@@ -18,7 +18,7 @@ const CardsContainer = () => {
         <p>UX, UI, Web, Apps, Logos</p>
         <h3 className="text-yellow-primary">Design Tools:</h3>
         <p className="leading-8">
-          Illustrator <br /> Photoshop <br /> Figma <br />
+          Illustrator <br /> Photoshop <br /> Figma <br /> Framer <br />
           Font Awesome <br />
           Pen & Paper <br />
           Sketch <br />
