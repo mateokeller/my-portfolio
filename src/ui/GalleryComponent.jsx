@@ -4,7 +4,9 @@ const GalleryComponent = (props) => {
   return (
     <div className="relative h-full w-full ">
       <img
-        className="w-full h-full object-cover rounded-lg object-top"
+        className={`w-full h-full object-cover rounded-lg object-top' ${
+          props.alignLeft ? "object-left" : "óbject - top"
+        }`}
         src={props.imagePath}
         alt="parallax landing"
       />

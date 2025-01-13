@@ -2,10 +2,7 @@ import React from "react";
 import GalleryComponent from "./GalleryComponent";
 
 import Countach from "../../public/projects-pdfs/Countach.pdf";
-import TheMind from "../../public/projects-pdfs/TheMind.pdf";
-import EkipeC from "../../public/projects-imgs/ekipe-c-landing.png";
 import BetweenTheStars from "../../public/projects-pdfs/BetweenTheStars.pdf";
-import SEIAR from "../../public/projects-pdfs/SEIAR_Landing.png";
 
 const gallery = () => {
   return (
@@ -49,6 +46,7 @@ const gallery = () => {
             projectTitle="SEIAR"
             projectSubtitle="Framer"
             projectDescription="Full redesign for a client using framer, fully functional website."
+            alignLeft={true}
           />
         </div>
         <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]">
