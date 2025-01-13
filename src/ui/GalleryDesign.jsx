@@ -5,7 +5,7 @@ import Countach from "../../public/projects-pdfs/Countach.pdf";
 import TheMind from "../../public/projects-pdfs/TheMind.pdf";
 import EkipeC from "../../public/projects-imgs/ekipe-c-landing.png";
 import BetweenTheStars from "../../public/projects-pdfs/BetweenTheStars.pdf";
-import InGame from "../../public/projects-pdfs/InGame.pdf";
+import SEIAR from "../../public/projects-pdfs/SEIAR_Landing.png";
 
 const gallery = () => {
   return (
@@ -43,12 +43,12 @@ const gallery = () => {
         </div>
         <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]">
           <GalleryComponent
-            imagePath={"/projects-imgs/in-game.jpg"}
-            url={InGame}
+            imagePath={"/projects-imgs/SEIAR_Landing.png"}
+            url={"https://spinning-provide-882148.framer.app/"}
             github={" "}
-            projectTitle="In Game"
-            projectSubtitle="Illustrator, Photoshop"
-            projectDescription="Poster designed for a Shortfilm project"
+            projectTitle="SEIAR"
+            projectSubtitle="Framer"
+            projectDescription="Full redesign for a client using framer, fully functional website."
           />
         </div>
         <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]">
