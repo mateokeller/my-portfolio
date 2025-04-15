@@ -41,7 +41,7 @@ const gallery = () => {
         <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]">
           <GalleryComponent
             imagePath={"/projects-imgs/SEIAR_Landing.png"}
-            url={"https://spinning-provide-882148.framer.app/"}
+            url={"https://seiar.framer.website/"}
             github={" "}
             projectTitle="SEIAR"
             projectSubtitle="Framer"
