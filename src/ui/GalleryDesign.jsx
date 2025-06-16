@@ -2,7 +2,6 @@ import React from "react";
 import GalleryComponent from "./GalleryComponent";
 
 import Countach from "../../public/projects-pdfs/Countach.pdf";
-import MCFStudio from "../../public/projects-pdfs/mcf-studio.pdf";
 
 const gallery = () => {
   return (
@@ -30,7 +29,7 @@ const gallery = () => {
         </div>
         <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]">
           <GalleryComponent
-            imagePath={"/projects-imgs/mcf-studio.jpg"}
+            imagePath={"/projects-imgs/mcf-studio.png"}
             url={"https://mcf.framer.website/"}
             github={""}
             projectTitle="MCF Studio"
