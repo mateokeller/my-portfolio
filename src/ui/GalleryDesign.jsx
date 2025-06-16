@@ -2,7 +2,7 @@ import React from "react";
 import GalleryComponent from "./GalleryComponent";
 
 import Countach from "../../public/projects-pdfs/Countach.pdf";
-import BetweenTheStars from "../../public/projects-pdfs/BetweenTheStars.pdf";
+import MCFStudio from "../../public/projects-pdfs/mcf-studio.pdf";
 
 const gallery = () => {
   return (
@@ -30,12 +30,12 @@ const gallery = () => {
         </div>
         <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]">
           <GalleryComponent
-            imagePath={"/projects-imgs/between-the-stars.jpg"}
-            url={BetweenTheStars}
+            imagePath={"/projects-imgs/mcf-studio.jpg"}
+            url={"https://mcf.framer.website/"}
             github={""}
-            projectTitle="Between The Stars"
-            projectSubtitle="Illustrator, Photoshop, Unreal Engine"
-            projectDescription="Concept and pitch for a videogame project"
+            projectTitle="MCF Studio"
+            projectSubtitle="Framer"
+            projectDescription="Web Design using Framer"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]">
