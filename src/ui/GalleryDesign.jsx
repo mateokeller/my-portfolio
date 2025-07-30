@@ -50,12 +50,12 @@ const gallery = () => {
         </div>
         <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]">
           <GalleryComponent
-            imagePath={"/projects-imgs/detras.png"}
-            url={"https://remarkable-kleicha-3888bc.netlify.app/"}
+            imagePath={"/projects-imgs/Bull-importaciones.png"}
+            url={"https://bullimportaciones.framer.website/"}
             github={" "}
-            projectTitle="Space Age"
-            projectSubtitle="3DS Max"
-            projectDescription="Space ship render for the cover of The Impossible Planet, by Phillip K. Dick - The render was inspired by the Space Age"
+            projectTitle="Bull Importaciones"
+            projectSubtitle="Framer"
+            projectDescription="Web Design using Framer"
           />
         </div>
         <div className="rounded-lg shadow-xl lg:col-span-2 lg:h-auto m:h-[250px]">
