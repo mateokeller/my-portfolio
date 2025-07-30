@@ -23,7 +23,7 @@ const AboutMe = () => {
         </p>
         <a
           className="font-extrabold text-xl no-underline text-black hover:text-yellow-primary mt-8"
-          href="/public/Curriculum.pdf"
+          href="/public/CV_English.pdf"
         >
           RESUME
         </a>
