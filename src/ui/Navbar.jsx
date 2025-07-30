@@ -29,7 +29,7 @@ const Navbar = (props) => {
               spy={true}
               smooth={true}
               offset={-50}
-              className="cursor-pointer"
+              className="cursor-pointer hover:text-yellow-primary"
             >
               Home
             </ReactLink>
@@ -38,7 +38,7 @@ const Navbar = (props) => {
               spy={true}
               smooth={true}
               offset={-50}
-              className="cursor-pointer"
+              className="cursor-pointer hover:text-yellow-primary"
             >
               About Me
             </ReactLink>
@@ -47,7 +47,7 @@ const Navbar = (props) => {
               spy={true}
               smooth={true}
               offset={-300}
-              className="cursor-pointer"
+              className="cursor-pointer hover:text-yellow-primary"
             >
               Portfolio
             </ReactLink>
@@ -56,7 +56,7 @@ const Navbar = (props) => {
               spy={true}
               smooth={true}
               offset={-300}
-              className="cursor-pointer"
+              className="cursor-pointer hover:text-yellow-primary"
             >
               Contact
             </ReactLink>
