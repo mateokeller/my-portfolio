@@ -50,7 +50,7 @@ const gallery = () => {
         </div>
         <div className="rounded-lg shadow-xl lg:h-auto m:h-[250px]">
           <GalleryComponent
-            imagePath={"/projects-imgs/Bull-importaciones.png"}
+            imagePath={"/projects-imgs/Bull-Importaciones.png"}
             url={"https://bullimportaciones.framer.website/"}
             github={" "}
             projectTitle="Bull Importaciones"
